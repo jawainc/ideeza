@@ -1,0 +1,26 @@
+*{
+  box-sizing: border-box;
+}
+html, body{
+  height: 100%;
+}
+#__nuxt{
+  height: 100%;
+}
+#__layout{
+  height: 100%;
+}
+
+.absolute-center-h-v{
+  position: absolute;
+  margin: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.absolute-center-v{
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
