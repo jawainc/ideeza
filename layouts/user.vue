@@ -7,8 +7,20 @@
 
 <script>
   import navigation from '~/components/partials/header-bar.vue'
+  import { mapMutations } from 'vuex'
   export default {
-    components: {navigation}
+    components: {navigation},
+    mounted() {
+      console.log(this.$device.isMobile);
+      if(this.$device.isMobile){
+        this.toggleLeftMenu();
+      }
+    },
+    methods: {
+      ...mapMutations({
+        toggleLeftMenu: 'usermenu/toggleLeftMenu'
+      })
+    }
   }
 </script>
 
