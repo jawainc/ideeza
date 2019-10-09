@@ -4,8 +4,8 @@
       <div class="flex items-center">
         <div class="w-6 h-full relative">
           <transition name="slide-fade">
-            <font-awesome-icon key="on" v-if="!leftMenu" @click="toggleLeftMenu()" class="absolute-center-v text-white cursor-pointer ml-1 mr-2 absolute" :icon="['fas', 'chevron-left']"/>
-            <font-awesome-icon key="off" v-else @click="toggleLeftMenu()" class="absolute-center-v text-white cursor-pointer ml-1 mr-2 absolute" :icon="['fas', 'bars']" />
+            <font-awesome-icon key="on" v-if="!leftMenu" @click="toggleLeftMenu()" class="absolute-center-v text-white cursor-pointer ml-1 mr-2 absolute h-4" :icon="['fas', 'chevron-left']"/>
+            <font-awesome-icon key="off" v-else @click="toggleLeftMenu()" class="absolute-center-v text-white cursor-pointer ml-1 mr-2 absolute h-4" :icon="['fas', 'bars']" />
 
           </transition>
         </div>
@@ -29,7 +29,7 @@
         <div class="flex justify-center items-center content-center w-m-c">
           <img class="h-10 w-10 rounded-full mr-2 " src="https://randomuser.me/api/portraits/men/17.jpg">
           <span class="text-white inline-block">John Doe</span>
-          <font-awesome-icon class="text-white cursor-pointer ml-5 lg:hidden" :icon="['fas', 'ellipsis-v']"/>
+          <font-awesome-icon class="text-white cursor-pointer ml-5 lg:hidden h-4" :icon="['fas', 'ellipsis-v']"/>
         </div>
       </div>
     </div>

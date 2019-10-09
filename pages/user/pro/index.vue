@@ -91,13 +91,13 @@
 
       <div class="flex-shrink border-t border-solid border-gray-300">
         <div class="flex content-center items-center mt-5 font-semibold text-gray-500 text-lg hover:text-gray-700 cursor-pointer">
-          <font-awesome-icon class="mr-5 text-lg" :icon="['fas', 'info-circle']"/> Help?
+          <font-awesome-icon class="mr-5 h-4" :icon="['fas', 'info-circle']"/> Help?
         </div>
         <div class="flex content-center items-center mt-2 font-semibold text-gray-500 text-lg hover:text-gray-700 cursor-pointer">
-          <font-awesome-icon class="mr-5 text-lg" :icon="['fas', 'cog']"/> Settings
+          <font-awesome-icon class="mr-5 h-4" :icon="['fas', 'cog']"/> Settings
         </div>
         <div class="flex content-center items-center mt-2 font-semibold text-gray-500 text-lg hover:text-gray-700 cursor-pointer">
-          <font-awesome-icon class="mr-5 text-lg" :icon="['fas', 'user-tie']"/> Contact Support
+          <font-awesome-icon class="mr-5 h-4" :icon="['fas', 'user-tie']"/> Contact Support
         </div>
       </div>
     </div>
