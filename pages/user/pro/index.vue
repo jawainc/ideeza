@@ -319,7 +319,7 @@
     @apply text-ideeza;
   }
   .panel-menu-icon{
-    width: 13px;
+    height: 11px;
     display: inline-block;
   }
   .main-arrow{
