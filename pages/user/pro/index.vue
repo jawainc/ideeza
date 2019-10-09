@@ -108,10 +108,10 @@
       <div class="flex justify-between flex-col lg:flex-row border-b border-gray-400 pl-5 pr-5 lg:pl-0 lg:pr-0 pb-3">
         <div class="text-xl font-bold m-3 lg:m-0 text-center lg:text-left">Circuit Board</div>
         <div class="flex items-center justify-center content-center">
-          <span class="panel-menu text-center" :class="{'active': currentMenu.name === 'Electronics'}" @click="addMenuState(menuData.electronic, 1)"><font-awesome-icon class="mr-1" :icon="['fas', 'bolt']"/>Electronics</span>
-          <span class="ml-5 panel-menu text-center" :class="{'active': currentMenu.name === 'Code'}" @click="addMenuState(menuData.code,1)"><font-awesome-icon class="mr-1" :icon="['fas', 'code']"/>Code</span>
-          <span class="ml-5 panel-menu text-center" :class="{'active': currentMenu.name === 'Cover'}" @click="addMenuState(menuData.cover,1)"><font-awesome-icon class="mr-1" :icon="['fas', 'cube']"/>Cover</span>
-          <span class="ml-5 panel-menu text-center" :class="{'active': currentMenu.name === 'General'}" @click="addMenuState(menuData.general,1)"><font-awesome-icon class="mr-1" :icon="['fas', 'wrench']"/>General</span>
+          <span class="panel-menu text-center" :class="{'active': currentMenu.name === 'Electronics'}" @click="addMenuState(menuData.electronic, 1)"><font-awesome-icon class="mr-1 panel-menu-icon" :icon="['fas', 'bolt']"/>Electronics</span>
+          <span class="ml-5 panel-menu text-center" :class="{'active': currentMenu.name === 'Code'}" @click="addMenuState(menuData.code,1)"><font-awesome-icon class="mr-1 panel-menu-icon" :icon="['fas', 'code']"/>Code</span>
+          <span class="ml-5 panel-menu text-center" :class="{'active': currentMenu.name === 'Cover'}" @click="addMenuState(menuData.cover,1)"><font-awesome-icon class="mr-1 panel-menu-icon" :icon="['fas', 'cube']"/>Cover</span>
+          <span class="ml-5 panel-menu text-center" :class="{'active': currentMenu.name === 'General'}" @click="addMenuState(menuData.general,1)"><font-awesome-icon class="mr-1 panel-menu-icon" :icon="['fas', 'wrench']"/>General</span>
         </div>
       </div>
     </div>
