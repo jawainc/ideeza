@@ -28,3 +28,18 @@ html, body{
 .svg-inline--fa.fa-w-10{
   width: auto;
 }
+
+.btn-small{
+  @apply px-3 text-sm font-semibold text-center rounded-sm border border-solid;
+  transition: all 0.3s;
+  height: 30px;
+}
+.btn-small svg{
+  vertical-align: text-bottom;
+}
+.btn-small--white{
+  @apply text-gray-600 border-gray-500 bg-white;
+}
+.btn-small--white:hover{
+  @apply shadow-md;
+}

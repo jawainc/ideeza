@@ -8,7 +8,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'ideeza': '#ff00c7'
+        'ideeza': '#ff00c7',
+        'ideeza-dark': '#431184'
       }
     }
   },
