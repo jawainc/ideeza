@@ -25,6 +25,9 @@ html, body{
   top: 50%;
   transform: translate(0, -50%);
 }
+.svg-inline--fa{
+  display: inline-block;
+}
 .svg-inline--fa.fa-w-10{
   width: auto;
 }

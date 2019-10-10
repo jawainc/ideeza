@@ -14,7 +14,7 @@
               <h2 class="text-xl text-gray-800 font-semibold">Soft Inncorporation L.L.C</h2>
               <div class="text-lg text-gray-600">Electronics & 3D Modelling</div>
               <div class="text-lg text-gray-600">
-                <font-awesome-icon class="mr-3 h-4" :icon="['fas', 'map-marker-alt']"/>
+                <font-awesome-icon class="mr-3 h-4 inline-block" :icon="['fas', 'map-marker-alt']"/>
                 New York, USA
               </div>
             </div>
