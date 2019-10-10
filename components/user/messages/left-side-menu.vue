@@ -25,7 +25,7 @@
               </div>
               <div>
                 <span class="text-base font-semibold text-gray-800">Jasmine Mueller</span>
-                <span class="text-xs text-ideeza"><span class="text-6xl text-gray-500 leading-none" >.</span> 5min ago</span>
+                <span class="text-xs text-ideeza"><span class="text-6xl text-gray-500 line-height-0" >.</span> 5min ago</span>
                 <div class="text-sm text-gray-500">
                   great product, love the func ....
                 </div>
@@ -45,7 +45,7 @@
               </div>
               <div>
                 <span class="text-base font-semibold text-gray-800">Jon Doe</span>
-                <span class="text-xs text-ideeza"><span class="text-6xl text-gray-500 leading-none" >.</span> 50min ago</span>
+                <span class="text-xs text-ideeza"><span class="text-6xl text-gray-500 line-height-0" >.</span> 50min ago</span>
                 <div class="text-sm text-gray-500">
                   great product, love the func ....
                 </div>
@@ -65,7 +65,7 @@
               </div>
               <div>
                 <span class="text-base font-semibold text-gray-800">Jane Doe</span>
-                <span class="text-xs text-gray-500"><span class="text-6xl text-gray-500 leading-none" >.</span> 1day ago</span>
+                <span class="text-xs text-gray-500"><span class="text-6xl text-gray-500 line-height-0" >.</span> 1day ago</span>
                 <div class="text-sm text-gray-500">
                   great product, love the func ....
                 </div>
@@ -85,7 +85,7 @@
               </div>
               <div>
                 <span class="text-base font-semibold text-gray-800">John Snow</span>
-                <span class="text-xs text-gray-500"><span class="text-6xl text-gray-500 leading-none" >.</span> 2day ago</span>
+                <span class="text-xs text-gray-500"><span class="text-6xl text-gray-500 line-height-0" >.</span> 2day ago</span>
                 <div class="text-sm text-gray-500">
                   great product, love the func ....
                 </div>
@@ -136,5 +136,8 @@
   }
   .menu-item:hover svg{
     @apply text-ideeza;
+  }
+  .line-height-0{
+    line-height: 0;
   }
 </style>
