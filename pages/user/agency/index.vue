@@ -182,7 +182,7 @@
       <div class="p-8 mb-10 shadow-md bg-white lg:w-4/6">
         <div class="product-history-tile lg:flex justify-between">
           <div class="flex-shrink flex">
-            <img class="mr-10" src="~/static/images/layercar.png">
+            <img class="mr-10" src="~/static/images/Layercar.png">
             <div>
               <h1 class="text-black text-xl font-semibold">Lamborghini<br>
                 Aventado Project</h1>
@@ -211,7 +211,7 @@
         </div>
         <div class="product-history-tile lg:flex justify-between">
           <div class="flex-shrink flex">
-            <img class="mr-10" src="~/static/images/layercar.png">
+            <img class="mr-10" src="~/static/images/Layercar.png">
             <div>
               <h1 class="text-black text-xl font-semibold">Lamborghini<br>
                 Aventado Project</h1>
