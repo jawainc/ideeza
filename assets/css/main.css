@@ -36,6 +36,7 @@ html, body{
 }
 .btn-small svg{
   vertical-align: text-bottom;
+  display: inline-block;
 }
 .btn-small--white{
   @apply text-gray-600 border-gray-500 bg-white;
