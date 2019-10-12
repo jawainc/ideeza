@@ -109,7 +109,7 @@
               </div>
             </div>
 
-            <button class="btn-small btn-small--white">
+            <button class="btn btn-small btn-small--white">
               <font-awesome-icon class="mr-1 h-4" :icon="['fas', 'envelope']"/> Message
             </button>
           </div>
@@ -128,7 +128,7 @@
               </div>
             </div>
 
-            <button class="btn-small btn-small--white">
+            <button class="btn btn-small btn-small--white">
               <font-awesome-icon class="mr-1 h-4" :icon="['fas', 'envelope']"/> Message
             </button>
           </div>
@@ -142,7 +142,7 @@
               </div>
             </div>
 
-            <button class="btn-small btn-small--white">
+            <button class="btn btn-small btn-small--white">
               <font-awesome-icon class="mr-1 h-4" :icon="['fas', 'envelope']"/> Message
             </button>
           </div>
@@ -156,7 +156,7 @@
               </div>
             </div>
 
-            <button class="btn-small btn-small--white">
+            <button class="btn btn-small btn-small--white">
               <font-awesome-icon class="mr-1 h-4" :icon="['fas', 'envelope']"/> Message
             </button>
           </div>
@@ -170,7 +170,7 @@
               </div>
             </div>
 
-            <button class="btn-small btn-small--white">
+            <button class="btn btn-small btn-small--white">
               <font-awesome-icon class="mr-1 h-4" :icon="['fas', 'envelope']"/> Message
             </button>
           </div>

@@ -88,18 +88,8 @@
         </div>
       </div>
 
+      <LeftBotMenu class="flex-shrink border-t border-solid border-gray-300"/>
 
-      <div class="flex-shrink border-t border-solid border-gray-300">
-        <div class="flex content-center items-center mt-5 font-semibold text-gray-500 text-lg hover:text-gray-700 cursor-pointer">
-          <font-awesome-icon class="mr-5 h-4" :icon="['fas', 'info-circle']"/> Help?
-        </div>
-        <div class="flex content-center items-center mt-2 font-semibold text-gray-500 text-lg hover:text-gray-700 cursor-pointer">
-          <font-awesome-icon class="mr-5 h-4" :icon="['fas', 'cog']"/> Settings
-        </div>
-        <div class="flex content-center items-center mt-2 font-semibold text-gray-500 text-lg hover:text-gray-700 cursor-pointer">
-          <font-awesome-icon class="mr-5 h-4" :icon="['fas', 'user-tie']"/> Contact Support
-        </div>
-      </div>
     </div>
 
     <!-- Main Contents -->
@@ -120,12 +110,14 @@
 
 <script>
   import _ from 'lodash'
+  import LeftBotMenu from '~/components/partials/left-menu-bot-items.vue'
   import LeftMenu from '~/components/user/pro/left-menu.vue'
     export default {
       layout: 'user',
       name: "index",
       components: {
-        LeftMenu
+        LeftMenu,
+        LeftBotMenu
       },
       data: function () {
         return {

@@ -19,7 +19,7 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#ff00c7' },
   /*
   ** Global CSS
   */
@@ -58,6 +58,13 @@ export default {
       ]
     }]
   ],
+  /**
+   * Router Middleware
+   */
+  router: {
+    middleware: 'router',
+    linkActiveClass: 'active-link'
+  },
   /*
   ** Build configuration
   */
