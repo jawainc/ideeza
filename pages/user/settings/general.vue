@@ -22,7 +22,7 @@
       <div class="form-field ">
         <div class="field-label" >
           Last Name
-          <font-awesome-icon class="ml-1 h-4" :icon="['fas', 'lock']"/>
+          <font-awesome-icon class="ml-1 h-4 inline" :icon="['fas', 'lock']"/>
         </div>
         <div class="field-input flex-grow">
           <input class="field h-10"  />
@@ -42,7 +42,7 @@
       <div class="form-field ">
         <div class="field-label" >
           Birth Date
-          <font-awesome-icon class="ml-1 h-4" :icon="['fas', 'lock']"/>
+          <font-awesome-icon class="ml-1 h-4 inline" :icon="['fas', 'lock']"/>
         </div>
         <div class="field-input flex-grow">
           <input class="field h-10"  />
@@ -50,14 +50,14 @@
       </div>
 
       <div class="form-field ">
-        <div class="field-label" >Email Address <font-awesome-icon class="ml-1 h-4" :icon="['fas', 'lock']"/></div>
+        <div class="field-label" >Email Address <font-awesome-icon class="ml-1 h-4 inline" :icon="['fas', 'lock']"/></div>
         <div class="field-input flex-grow">
           <input class="field h-10"  />
         </div>
       </div>
 
       <div class="form-field ">
-        <div class="field-label" >Phone Number <font-awesome-icon class="ml-1 h-4" :icon="['fas', 'lock']"/></div>
+        <div class="field-label" >Phone Number <font-awesome-icon class="ml-1 h-4 inline" :icon="['fas', 'lock']"/></div>
         <div class="field-input flex-grow">
           <input class="field h-10" />
         </div>
@@ -73,7 +73,7 @@
       </div>
 
       <div class="form-field ">
-        <div class="field-label" >Address <font-awesome-icon class="ml-1 h-4" :icon="['fas', 'lock']"/></div>
+        <div class="field-label" >Address <font-awesome-icon class="ml-1 h-4 inline" :icon="['fas', 'lock']"/></div>
         <div class="field-input flex-grow">
           <input class="field h-10" />
         </div>

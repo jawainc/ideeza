@@ -43,7 +43,7 @@
     }
 
     .checkbox{
-        @apply text-gray-600 text-lg mr-2 select-none;
+        @apply text-gray-600 text-lg mr-2 select-none h-4;
         transition: .3s all ease;
     }
     .checkbox.checkbox-active{
