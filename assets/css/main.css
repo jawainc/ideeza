@@ -45,6 +45,9 @@ html, body{
 .border-light-gray{
   @apply border border-solid border-gray-400;
 }
+
+svg,
+.svg-inline,
 .svg-inline--fa{
   display: inline-block;
 }
