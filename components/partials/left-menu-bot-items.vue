@@ -1,5 +1,5 @@
 <template>
-  <div class="p-5 ">
+  <div >
     <div class="flex content-center items-center mt-5 font-semibold text-gray-500 text-lg hover:text-gray-700 cursor-pointer">
       <font-awesome-icon class="mr-5 h-4" :icon="['fas', 'info-circle']"/> Help?
     </div>

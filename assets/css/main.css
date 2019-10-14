@@ -28,6 +28,7 @@ html, body{
 #__layout{
   height: 100%;
 }
+
 .absolute-center-h-v{
   position: absolute;
   margin: 0;
@@ -49,7 +50,10 @@ html, body{
 }
 .svg-inline--fa.fa-w-10{
   width: auto;
+  display: inline-block;
 }
+
+/*Transition*/
 .page-enter-active, .page-leave-active {
   transition: opacity .5s;
 }

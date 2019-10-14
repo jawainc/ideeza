@@ -99,7 +99,7 @@
       </div>
     </div>
 
-    <LeftBotMenu class="flex-srink" />
+    <LeftBotMenu class="flex-srink p-5" />
 
   </div>
 </template>

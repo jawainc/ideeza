@@ -15,7 +15,9 @@
           <font-awesome-icon class="mr-5 h-4" :icon="['fas', 'list']"/> Task List
         </div>
         <div class="menu-item">
-          <font-awesome-icon class="mr-5 h-4" :icon="['far', 'newspaper']"/> News Feed
+          <nuxt-link to="/user/news">
+            <font-awesome-icon class="mr-5 h-4" :icon="['far', 'newspaper']"/> News Feed
+          </nuxt-link>
         </div>
         <div class="menu-item">
           <nuxt-link to="/user/messages">
@@ -57,6 +59,10 @@
     @apply text-gray-500;
   }
   .menu-item:hover svg{
+    @apply text-ideeza;
+  }
+  .active-link,
+  .active-link svg{
     @apply text-ideeza;
   }
 </style>
