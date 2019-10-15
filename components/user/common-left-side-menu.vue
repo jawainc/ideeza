@@ -12,7 +12,9 @@
           <font-awesome-icon class="mr-5 h-4" :icon="['fas', 'stream']"/> My Projects
         </div>
         <div class="menu-item">
-          <font-awesome-icon class="mr-5 h-4" :icon="['fas', 'list']"/> Task List
+          <nuxt-link to="/user/tasklist">
+            <font-awesome-icon class="mr-5 h-4" :icon="['fas', 'list']"/> Task List
+          </nuxt-link>
         </div>
         <div class="menu-item">
           <nuxt-link to="/user/news">
