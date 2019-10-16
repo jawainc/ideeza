@@ -105,7 +105,7 @@
 </template>
 
 <script>
-  import LeftBotMenu from '~/components/partials/left-menu-bot-items.vue'
+  import LeftBotMenu from '~/components/user/left-menu-bot-items.vue'
     export default {
         name: "common-left-side-menu",
       components: {

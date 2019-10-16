@@ -110,7 +110,7 @@
 
 <script>
   import _ from 'lodash'
-  import LeftBotMenu from '~/components/partials/left-menu-bot-items.vue'
+  import LeftBotMenu from '~/components/user/left-menu-bot-items.vue'
   import LeftMenu from '~/components/user/pro/left-menu.vue'
     export default {
       layout: 'user',

@@ -1,5 +1,5 @@
 <template>
-    <div class="header-bar">
+    <div class="header-bar gradient-bg">
       <!--Logo-->
       <div class="flex items-center">
         <div class="w-6 h-full relative">
@@ -63,7 +63,6 @@
   }
   .header-bar{
     @apply flex justify-between pl-5 pr-5 pt-2 pb-2;
-    background-image: linear-gradient(54deg,#ff00c7,#441184);
   }
   .logo{
     width: 70px;

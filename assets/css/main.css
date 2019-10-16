@@ -56,6 +56,10 @@ svg,
   display: inline-block;
 }
 
+.gradient-bg{
+  background-image: linear-gradient(54deg,#ff00c7,#441184);
+}
+
 /*Transition*/
 .page-enter-active, .page-leave-active {
   transition: opacity .5s;
@@ -75,12 +79,15 @@ select{
 .field--border-light{
   @apply border-gray-400;
 }
+.field--border-none{
+  @apply border-0;
+}
 
 
 
 /*Buttons*/
 .btn{
-  @apply py-2 text-sm font-semibold text-center rounded-sm border border-solid outline-none select-none;
+  @apply py-2 text-sm font-semibold text-center rounded-sm border border-solid outline-none cursor-pointer;
   transition: all 0.3s;
 }
 .btn:hover{
@@ -105,6 +112,16 @@ select{
 .pill-button--ideeza{
   @apply text-white bg-ideeza border-0;
 }
+.btn--ideeza{
+  @apply bg-ideeza text-white border-ideeza;
+}
+.btn--ideeza-dark{
+  @apply bg-ideeza-dark text-white border-ideeza-dark;
+}
+.btn-normal{
+  @apply px-1 font-thin rounded-none leading-none;
+  min-width: fit-content;
+}
 
 @screen lg{
   .btn{
@@ -112,5 +129,8 @@ select{
   }
   .btn-small{
     @apply text-sm font-normal py-0;
+  }
+  .btn-normal{
+    min-width: 185px;
   }
 }

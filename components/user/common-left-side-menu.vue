@@ -6,25 +6,36 @@
       <!--Left Menu-->
       <div class="mt-10 left-main-menu ">
         <div class="menu-item">
-          <font-awesome-icon class="mr-5 h-4" :icon="['fas', 'tachometer-alt']"/> Dashboard
+          <nuxt-link to="/user/dashboard">
+            <DashBoardIcon class="fill-current mr-5" /> Dashboard
+          </nuxt-link>
         </div>
         <div class="menu-item">
-          <font-awesome-icon class="mr-5 h-4" :icon="['fas', 'stream']"/> My Projects
+          <ProjectsIcon class="fill-current mr-5" /> My Projects
         </div>
         <div class="menu-item">
           <nuxt-link to="/user/tasklist">
-            <font-awesome-icon class="mr-5 h-4" :icon="['fas', 'list']"/> Task List
+            <TaskIcon class="fill-current mr-5" /> Task List
           </nuxt-link>
         </div>
         <div class="menu-item">
           <nuxt-link to="/user/news">
-            <font-awesome-icon class="mr-5 h-4" :icon="['far', 'newspaper']"/> News Feed
+            <font-awesome-icon class="mr-5 w-8 h-8 text-2xl align-text-top" :icon="['far', 'newspaper']"/> News Feed
           </nuxt-link>
         </div>
         <div class="menu-item">
           <nuxt-link to="/user/messages">
-            <font-awesome-icon class="mr-5 h-4" :icon="['fas', 'comments']"/> Messages
+            <font-awesome-icon class="mr-5 w-8 h-8 text-2xl align-text-top" :icon="['fas', 'comments']"/> Messages
           </nuxt-link>
+        </div>
+        <div class="menu-item">
+
+            <font-awesome-icon class="mr-5 w-8 h-8 text-2xl align-text-top" :icon="['fas', 'info-circle']"/> Help
+
+        </div>
+        <div class="menu-item">
+
+          <font-awesome-icon class="mr-5 w-8 h-8 text-2xl align-text-top" :icon="['fas', 'bold']"/> Blog
 
         </div>
       </div>
@@ -37,11 +48,17 @@
 </template>
 
 <script>
-  import LeftBotMenu from '~/components/partials/left-menu-bot-items.vue'
+  import LeftBotMenu from '~/components/user/left-menu-bot-items.vue'
+  import DashBoardIcon from '~/components/partials/icons/dashboard-icon.vue'
+  import ProjectsIcon from '~/components/partials/icons/bars-icon.vue'
+  import TaskIcon from '~/components/partials/icons/list-icon.vue'
     export default {
         name: "common-left-side-menu",
       components: {
-        LeftBotMenu
+        LeftBotMenu,
+        DashBoardIcon,
+        ProjectsIcon,
+        TaskIcon,
       }
     }
 </script>
@@ -52,8 +69,9 @@
     min-width: 300px;
   }
   .menu-item{
-    @apply flex mb-5 content-center items-center mt-2 text-gray-700 text-lg font-semibold cursor-pointer;
+    @apply flex mb-8 content-center items-center mt-2 text-gray-700 text-xl font-semibold cursor-pointer;
   }
+
   .menu-item:hover{
     @apply text-ideeza;
   }
