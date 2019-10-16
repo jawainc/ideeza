@@ -123,6 +123,20 @@ select{
   min-width: fit-content;
 }
 
+.vc-arrows-container{
+  border-bottom: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+
+}
+
+.vc-weekday{
+  color: black !important;
+  font-size: 15px !important;
+}
+.ideeza-arrow{
+  @apply text-ideeza;
+}
+
 @screen lg{
   .btn{
     @apply text-lg;

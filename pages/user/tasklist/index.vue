@@ -290,8 +290,10 @@
       <div class="text-gray-800 text-2xl font-semibold text-center">
         Calendar
       </div>
+      <!--Calendar-->
+      <vc-calendar class="mx-auto mt-5" color="pink" is-expanded :theme="theme" />
 
-      <div class="mt-16 py-5 px-5 border-t border-solid border-gray-300">
+      <div class="mt-5 py-5 px-5 border-t border-solid border-gray-300">
         <div class="text-xl text-gray-500 font-semibold">
           Latest Activity
         </div>
@@ -347,7 +349,17 @@
       CheckBox
     },
     data: function () {
-      return {}
+      return {
+        theme: {
+          container: {
+            light: 'ideeza-date-picker',
+          },
+          arrows: {
+            light:
+              'ideeza-arrow',
+          },
+        }
+      }
     },
     computed: {
       leftMenu() {
@@ -403,4 +415,5 @@
     width: 300px;
     min-width: 300px;
   }
+
 </style>

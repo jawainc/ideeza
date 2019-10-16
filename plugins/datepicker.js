@@ -1,6 +1,9 @@
-// https://github.com/weifeiyue/vue-datepicker-local
+// https://vcalendar.io
 
-import VueDatepickerLocal from 'vue-datepicker-local'
+import VCalendar from 'v-calendar';
 import Vue from 'vue'
 
-Vue.component('date-picker', VueDatepickerLocal);
+Vue.use(VCalendar, {
+  componentPrefix: 'vc',  // Use <vc-calendar /> instead of <v-calendar />
+
+});
