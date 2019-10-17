@@ -34,8 +34,9 @@
 
         </div>
         <div class="menu-item">
-
-          <font-awesome-icon class="mr-5 w-8 h-8 text-2xl align-text-top" :icon="['fas', 'bold']"/> Blog
+          <nuxt-link to="/user/blog">
+            <font-awesome-icon class="mr-5 w-8 h-8 text-2xl align-text-top" :icon="['fas', 'bold']"/> Blog
+          </nuxt-link>
 
         </div>
       </div>
