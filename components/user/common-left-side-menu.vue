@@ -11,7 +11,9 @@
           </nuxt-link>
         </div>
         <div class="menu-item">
-          <ProjectsIcon class="fill-current mr-5" /> My Projects
+          <nuxt-link to="/user/projects">
+            <ProjectsIcon class="fill-current mr-5" /> My Projects
+          </nuxt-link>
         </div>
         <div class="menu-item">
           <nuxt-link to="/user/tasklist">
