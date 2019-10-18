@@ -1,5 +1,5 @@
 <template>
-    <div class="py-10">
+    <div class="py-10 hidden lg:block">
       <div class="stepper-container mx-auto">
         <div class="stepper-bar bg-gray-200 relative">
           <div class="stepper-bar-overlay bg-ideeza-dark" :style="`width: ${overlayWidth}%` "></div>

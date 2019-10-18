@@ -9,12 +9,14 @@
       <tr class="text-gray-800 h16">
         <th class="text-left ">Products</th>
         <th class="text-left lg:text-center">Color</th>
+        <th class="text-left lg:text-center">Price</th>
         <th class="text-left lg:text-center">Quantity</th>
+        <th class="text-left lg:text-center">Cost</th>
         <th></th>
       </tr>
       </thead>
       <tbody>
-      <tr class="">
+        <tr class="">
         <td class="product" >
           <div class="lg:flex">
             <div class="mr-2">
@@ -33,37 +35,39 @@
 
         </td>
         <td class="lg:text-center" >Red</td>
+        <td class="lg:text-center font-semibold" >$20,000</td>
         <td class="lg:text-center" ><span class="inline-block mr-3">-</span>1<span class="inline-block ml-3">+</span></td>
-
+          <td class="font-semibold lg:text-center" ><font-awesome-icon class="mr-3 h-4 cursor-pointer" :icon="['fas', 'chevron-down']"/>$100,000</td>
         <td class="lg:text-right">
           <font-awesome-icon class="mr-1 h-4 cursor-pointer text-ideeza" :icon="['fas', 'trash']"/>
         </td>
       </tr>
-      <tr class="">
-        <td class="product" >
-          <div class="lg:flex">
-            <div class="mr-2">
-              <img src="~/static/images/Layercar.png">
-            </div>
-            <div class="my-auto">
+        <tr class="">
+          <td class="product" >
+            <div class="lg:flex">
+              <div class="mr-2">
+                <img src="~/static/images/Layercar.png">
+              </div>
+              <div class="my-auto">
                 <span class="block font-semibold">
                   Audi
                 </span>
-              <span class="block text-sm text-gray-500">
+                <span class="block text-sm text-gray-500">
                   Electronics + Cover
                 </span>
 
+              </div>
             </div>
-          </div>
 
-        </td>
-        <td class="lg:text-center" >Red</td>
-        <td class="lg:text-center" ><span class="inline-block mr-3">-</span>1<span class="inline-block ml-3">+</span></td>
-
-        <td class="lg:text-right">
-          <font-awesome-icon class="mr-1 h-4 cursor-pointer text-ideeza" :icon="['fas', 'trash']"/>
-        </td>
-      </tr>
+          </td>
+          <td class="lg:text-center" >Red</td>
+          <td class="lg:text-center font-semibold" >$20,000</td>
+          <td class="lg:text-center" ><span class="inline-block mr-3">-</span>1<span class="inline-block ml-3">+</span></td>
+          <td class="font-semibold lg:text-center" ><font-awesome-icon class="mr-3 h-4 cursor-pointer" :icon="['fas', 'chevron-down']"/>$100,000</td>
+          <td class="lg:text-right">
+            <font-awesome-icon class="mr-1 h-4 cursor-pointer text-ideeza" :icon="['fas', 'trash']"/>
+          </td>
+        </tr>
       </tbody>
     </table>
 
@@ -75,7 +79,9 @@
       <tr class="text-gray-800 h16">
         <th class="text-left ">Products</th>
         <th class="text-left lg:text-center">Color</th>
+        <th class="text-left lg:text-center">Price</th>
         <th class="text-left lg:text-center">Quantity</th>
+        <th class="text-left lg:text-center">Cost</th>
         <th></th>
       </tr>
       </thead>
@@ -99,12 +105,14 @@
 
         </td>
         <td class="lg:text-center" >Silver</td>
+        <td class="lg:text-center font-semibold" >$20,000</td>
         <td class="lg:text-center" ><span class="inline-block mr-3">-</span>1<span class="inline-block ml-3">+</span></td>
-
+        <td class="font-semibold lg:text-center" ><font-awesome-icon class="mr-3 h-4 cursor-pointer" :icon="['fas', 'chevron-down']"/>$100,000</td>
         <td class="lg:text-right">
           <font-awesome-icon class="mr-1 h-4 cursor-pointer text-ideeza" :icon="['fas', 'trash']"/>
         </td>
       </tr>
+
       </tbody>
     </table>
 
@@ -115,7 +123,7 @@
 <script>
 
     export default {
-        name: "overview",
+        name: "cart",
       methods: {
 
 
@@ -124,15 +132,12 @@
 </script>
 
 <style scoped>
-  .promo-field-container{
-    width: 100%;
-    max-width: 422px;
-  }
+
   /*Table*/
   @screen lg{
     table{
       @apply mb-5 w-full table-auto border-collapse text-gray-600 mx-auto;
-      max-width: 1050px;
+
     }
     thead tr{
       @apply border-b-2 border-solid border-ideeza;
@@ -194,7 +199,9 @@
       */
     td:nth-of-type(1):before { content: "Products"; }
     td:nth-of-type(2):before { content: "Color"; }
+    td:nth-of-type(2):before { content: "Price"; }
     td:nth-of-type(4):before { content: "Quantity"; }
+    td:nth-of-type(4):before { content: "Cost"; }
     td:nth-of-type(6):before { content: "Action"; }
   }
 </style>

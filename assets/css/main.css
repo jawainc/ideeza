@@ -152,6 +152,10 @@ select{
     @apply border-solid border-gray-300;
   }
 
+  .heading-border--dark{
+    @apply border-gray-500;
+  }
+
   .w-max-content{
     min-width: max-content;
   }
