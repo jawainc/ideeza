@@ -1,8 +1,9 @@
 <template>
   <div class="lg:px-20">
     <h1 class="text-lg font-semibold heading-border border-b pb-3">Projects</h1>
-    <div class="p-3 my-3 gradient-bg text-white">
+    <div class="p-3 my-3 gradient-bg text-white flex justify-between gradient-bg items-center">
       <div class="text-sm mb-1 lg:mb-0 lg:text-xl">Lamborghini Aventado and Something</div>
+      <font-awesome-icon class="mr-1 h-4 cursor-pointer text-white" :icon="['fas', 'trash']"/>
     </div>
     <table>
       <thead>
@@ -69,10 +70,15 @@
           </td>
         </tr>
       </tbody>
-    </table>
 
-    <div class="p-3 my-3 gradient-bg text-white">
+    </table>
+    <div class="py-5 pr-5 text-right">
+      Total: <span class="ml-3">$25000</span>
+    </div>
+
+    <div class="p-3 my-3 flex justify-between gradient-bg items-center text-white">
       <div class="text-sm mb-1 lg:mb-0 lg:text-xl">Washing machines</div>
+      <font-awesome-icon class="mr-1 h-4 cursor-pointer text-white" :icon="['fas', 'trash']"/>
     </div>
     <table>
       <thead>
@@ -114,8 +120,11 @@
       </tr>
 
       </tbody>
-    </table>
 
+    </table>
+    <div class="py-5 pr-5 text-right">
+      Total: <span class="ml-3">$25000</span>
+    </div>
 
   </div>
 </template>
@@ -124,9 +133,8 @@
 
     export default {
         name: "cart",
-      methods: {
-
-
+      mounted() {
+        this.$store.commit('cartstepper/set', {position: 2})
       }
     }
 </script>
@@ -203,5 +211,7 @@
     td:nth-of-type(4):before { content: "Quantity"; }
     td:nth-of-type(4):before { content: "Cost"; }
     td:nth-of-type(6):before { content: "Action"; }
+
+
   }
 </style>

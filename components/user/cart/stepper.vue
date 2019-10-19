@@ -2,35 +2,35 @@
     <div class="py-10 hidden lg:block">
       <div class="stepper-container mx-auto">
         <div class="stepper-bar bg-gray-200 relative">
-          <div class="stepper-bar-overlay bg-ideeza-dark" :style="`width: ${overlayWidth}%` "></div>
+          <div class="hidden stepper-bar-overlay bg-ideeza-dark" :style="`width: ${overlayWidth}%` "></div>
           <div class="absolute top-0 left-0 h-full w-full z-50 flex justify-between">
 
             <!--1-->
-            <div class="stepper-icon-wrapper active relative">
+            <div class="stepper-icon-wrapper relative" :class="{'active': cartStep === 0 || cartStep === 7}">
               <check-list-icon class="fill-current absolute-center-h-v" />
             </div>
             <!--2-->
-            <div class="stepper-icon-wrapper relative" :class="{'active': cartStep > 0}">
+            <div class="stepper-icon-wrapper relative" :class="{'active': cartStep === 1 || cartStep === 7}">
               <tap-icon class="fill-current absolute-center-h-v" />
             </div>
             <!--3-->
-            <div class="stepper-icon-wrapper relative" :class="{'active': cartStep > 1}">
+            <div class="stepper-icon-wrapper relative" :class="{'active': cartStep === 2 || cartStep === 7}">
               <cart-icon class="fill-current absolute-center-h-v" />
             </div>
             <!--4-->
-            <div class="stepper-icon-wrapper relative" :class="{'active': cartStep > 2}">
+            <div class="stepper-icon-wrapper relative" :class="{'active': cartStep === 3 || cartStep === 7}">
               <services-icon class="fill-current absolute-center-h-v" />
             </div>
             <!--5-->
-            <div class="stepper-icon-wrapper relative" :class="{'active': cartStep > 3}">
+            <div class="stepper-icon-wrapper relative" :class="{'active': cartStep === 4 || cartStep === 7}">
               <font-awesome-icon class="w-8 h-8 text-xl absolute-center-h-v" :icon="['fas', 'truck-loading']"/>
             </div>
             <!--6-->
-            <div class="stepper-icon-wrapper relative" :class="{'active': cartStep > 4}">
+            <div class="stepper-icon-wrapper relative" :class="{'active': cartStep === 5 || cartStep === 7}">
               <font-awesome-icon class="w-8 h-8 text-xl absolute-center-h-v" :icon="['fas', 'money-check-alt']"/>
             </div>
             <!--7-->
-            <div class="stepper-icon-wrapper relative" :class="{'active': cartStep > 5}">
+            <div class="stepper-icon-wrapper relative" :class="{'active': cartStep === 6 || cartStep === 7}">
               <font-awesome-icon class="w-8 h-8 text-xl absolute-center-h-v" :icon="['fas', 'clipboard-check']"/>
             </div>
 

@@ -17,6 +17,9 @@
   import ShoppingBasketIcon from '~/components/partials/icons/shopping-basket-icon.vue'
     export default {
         name: "cart-options",
+      mounted() {
+        this.$store.commit('cartstepper/set', {position: 1})
+      },
       components: {
         BluePrintIcon,
         ShoppingBasketIcon

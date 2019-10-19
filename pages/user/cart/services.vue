@@ -232,6 +232,9 @@
   import SearchInput from '~/components/form/search.vue'
     export default {
         name: "services",
+      mounted() {
+        this.$store.commit('cartstepper/set', {position: 3})
+      },
       components: {
           SearchInput
       }

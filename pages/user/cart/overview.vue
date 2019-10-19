@@ -116,10 +116,9 @@
 
     export default {
         name: "overview",
-      methods: {
-
-
-      }
+        mounted() {
+          this.$store.commit('cartstepper/set', {position: 0})
+        }
     }
 </script>
 
