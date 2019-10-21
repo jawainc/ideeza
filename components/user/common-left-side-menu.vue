@@ -1,7 +1,5 @@
 <template>
-  <div class="flex-shrink flex flex-col  p-10 bg-white h-full shadow left-side-bar">
-    <div class="flex-shrink">
-
+  <div class="flex flex-col justify-between  p-10 bg-white h-full shadow left-side-bar">
 
       <!--Left Menu-->
       <div class="mt-10 left-main-menu ">
@@ -30,11 +28,7 @@
             <font-awesome-icon class="mr-5 w-8 h-8 text-2xl align-text-top" :icon="['fas', 'comments']"/> Messages
           </nuxt-link>
         </div>
-        <div class="menu-item">
 
-            <font-awesome-icon class="mr-5 w-8 h-8 text-2xl align-text-top" :icon="['fas', 'info-circle']"/> Help
-
-        </div>
         <div class="menu-item">
           <nuxt-link to="/user/blog">
             <font-awesome-icon class="mr-5 w-8 h-8 text-2xl align-text-top" :icon="['fas', 'bold']"/> Blog
@@ -42,7 +36,7 @@
 
         </div>
       </div>
-    </div>
+
 
     <LeftBotMenu class="flex-srink" />
 

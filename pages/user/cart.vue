@@ -10,18 +10,12 @@
           <CartStepper />
           <nuxt-child></nuxt-child>
           <div v-if="cartStep < 7" class="py-10 lg:px-20 flex flex-col lg:flex-row justify-between">
-            <button @click="moveBack" v-if="cartStep > 3" class="order-2 lg:order-1 my-4 lg:my-0 btn pill-button px-8 py-1"><font-awesome-icon class="mr-2 h-4 cursor-pointer" :icon="['fas', 'long-arrow-alt-left']"/> Back</button>
-            <button v-if="cartStep <= 3" class="order-2 lg:order-1 my-4 lg:my-0 btn pill-button px-8 py-1">Continue shopping</button>
-            <div v-if="cartStep <= 3" class="order-1 lg:order-2 px-5 rounded-full bg-gray-200 items-center flex mx-1">
-              <img src="~/static/images/percentage.png" alt="">
-              <span class="text-lg mx-2 font-semibold">Promo Code</span>
-              <input class="mx-2 bg-transparent border-b border-solid border-ideeza ">
-              <font-awesome-icon class="ml-2 h-4 cursor-pointer text-gray-500" :icon="['fas', 'long-arrow-alt-right']"/>
-            </div>
+            <button @click="moveBack" v-if="cartStep > 0" class="order-2 lg:order-1 my-4 lg:my-0 btn pill-button px-8 py-1"><font-awesome-icon class="mr-2 h-4 cursor-pointer" :icon="['fas', 'long-arrow-alt-left']"/> Back</button>
+            <button v-if="cartStep !== 6" class="order-1 lg:order-2 my-4 lg:my-0 btn pill-button px-8 py-1">Continue shopping</button>
             <div v-if="cartStep === 6" class="order-1 lg:order-2 items-center content-center">
              <span class="text-gray-500 font-semibold">Total Price:</span><span class="text-gray-800 text-xl font-semibold ml-10">$1000,000</span>
             </div>
-            <button v-if="cartStep <= 5" @click="moveNext" class="order-3 btn pill-button pill-button--ideeza px-8 py-1">Next Step <font-awesome-icon class="ml-2 h-4 cursor-pointer" :icon="['fas', 'long-arrow-alt-right']"/></button>
+            <button v-if="cartStep <= 5 && cartStep !== 1" @click="moveNext" class="order-3 btn pill-button pill-button--ideeza px-8 py-1">Next<font-awesome-icon class="ml-2 h-4 cursor-pointer" :icon="['fas', 'long-arrow-alt-right']"/></button>
             <nuxt-link v-if="cartStep === 6" to="/user/cart/thankyou" class="order-3 btn pill-button pill-button--ideeza px-8 py-1">Confirm order</nuxt-link>
           </div>
         </div>

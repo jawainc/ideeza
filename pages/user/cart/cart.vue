@@ -17,7 +17,7 @@
       </tr>
       </thead>
       <tbody>
-        <tr class="">
+        <tr class="" @click="details1 = !details1">
         <td class="product" >
           <div class="lg:flex">
             <div class="mr-2">
@@ -30,19 +30,45 @@
               <span class="block text-sm text-gray-500">
                   Electronics + Cover
                 </span>
-
             </div>
           </div>
-
         </td>
         <td class="lg:text-center" >Red</td>
-        <td class="lg:text-center font-semibold" >$20,000</td>
-        <td class="lg:text-center" ><span class="inline-block mr-3">-</span>1<span class="inline-block ml-3">+</span></td>
+        <td class="lg:text-center" >
+          <span class="font-semibold">$20,000</span>
+        </td>
+        <td class="lg:text-center" >
+          <span class="inline-block mr-3">-</span>1<span class="inline-block ml-3">+</span>
+        </td>
           <td class="font-semibold lg:text-center" ><font-awesome-icon class="mr-3 h-4 cursor-pointer" :icon="['fas', 'chevron-down']"/>$100,000</td>
         <td class="lg:text-right">
           <font-awesome-icon class="mr-1 h-4 cursor-pointer text-ideeza" :icon="['fas', 'trash']"/>
         </td>
       </tr>
+        <tr v-if="details1" class="" >
+          <td class="product" >
+
+          </td>
+          <td class="lg:text-center" ></td>
+          <td class="lg:text-center" >
+            <span class="font-semibold block ">Category</span>
+            <span class="block mt-3">Electronics</span>
+            <span class="block mt-3">Code</span>
+          </td>
+          <td class="lg:text-center" >
+            <span class="font-semibold block">Manufacturer</span>
+            <div class="block mt-3">PCB way, Cha...  <font-awesome-icon @click="openManufacturer = true" class="mr-3 h-4 cursor-pointer text-ideeza" :icon="['fas', 'pen']"/></div>
+            <div class="block mt-3">Flying car N3, L...  <font-awesome-icon @click="openManufacturer = true" class="mr-3 h-4 cursor-pointer text-ideeza" :icon="['fas', 'pen']"/></div>
+          </td>
+          <td class="lg:text-center" >
+            <span class="font-semibold block ">Price</span>
+            <span class="block mt-3">$10,000</span>
+            <span class="block mt-3">$5000</span>
+          </td>
+          <td class="lg:text-right">
+
+          </td>
+        </tr>
         <tr class="">
           <td class="product" >
             <div class="lg:flex">
@@ -126,16 +152,27 @@
       Total: <span class="ml-3">$25000</span>
     </div>
 
+    <Manufacturer @close="openManufacturer = false" v-if="openManufacturer" class="z-50" />
   </div>
 </template>
 
 <script>
-
+    import Manufacturer from '~/components/user/cart/manufacturer.vue'
     export default {
-        name: "cart",
+      name: "cart",
+      components: {
+        Manufacturer
+      },
+      data: function() {
+        return {
+          details1: false,
+          openManufacturer: false
+        }
+      },
       mounted() {
         this.$store.commit('cartstepper/set', {position: 2})
-      }
+      },
+
     }
 </script>
 
@@ -157,10 +194,10 @@
       width: 180px;
     }
     tbody td{
-      @apply border-t border-solid border-gray-400 py-3 my-3;
+      @apply py-3 my-3;
     }
     tbody tr:last-child td{
-      @apply border-b border-solid border-gray-400 py-3 my-3;
+      @apply py-3 my-3;
     }
   }
 
