@@ -122,6 +122,9 @@ select{
   @apply font-thin rounded-none leading-none;
   min-width: fit-content;
 }
+.btn-text-bold{
+  @apply font-semibold;
+}
 
 .pill-button{
   @apply rounded-full border-gray-500 bg-gray-200 text-gray-700 leading-loose;
