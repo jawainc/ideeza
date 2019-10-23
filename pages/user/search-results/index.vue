@@ -13,7 +13,7 @@
           <div class="font-semibold text-lg mr-5">Store</div>
         </div>
         <div class="flex items-center font-semibold text-lg text-ideeza-dark mt-5 ml-2 lg:ml-0 lg:mt-0">
-          <font-awesome-icon class="mr-2 panel-menu-icon" :icon="['fas', 'sliders-h']"/> <span>Filter</span>
+          <font-awesome-icon class="mr-2 h-4 panel-menu-icon" :icon="['fas', 'sliders-h']"/> <span>Filter</span>
         </div>
       </div>
 
@@ -44,13 +44,12 @@
               <img class="search-avatar-img mr-2" src="https://randomuser.me/api/portraits/men/6.jpg" alt=""> John Doe
             </div>
             <div class="flex items-center text-gray-500 text-sm">
-              <div class="mr-2"><font-awesome-icon class="mr-1 panel-menu-icon" :icon="['fas', 'eye']"/>1.5k</div>
-              <div class="mr-2"><font-awesome-icon class="mr-1 panel-menu-icon" :icon="['fas', 'comments']"/>8</div>
-              <div class="mr-2"><font-awesome-icon class="mr-1 panel-menu-icon" :icon="['fas', 'star']"/>3.6</div>
+              <div class="mr-2"><font-awesome-icon class="mr-1 h-4 panel-menu-icon" :icon="['fas', 'eye']"/>1.5k</div>
+              <div class="mr-2"><font-awesome-icon class="mr-1 h-4 panel-menu-icon" :icon="['fas', 'comments']"/>8</div>
+              <div class="mr-2"><font-awesome-icon class="mr-1 h-4 panel-menu-icon" :icon="['fas', 'star']"/>3.6</div>
             </div>
           </div>
         </div>
-
         <div class="search-item shadow">
           <div class="search-item-img">
             <img class="object-cover object-center" src="~/static/images/dron-8.png" alt="">
@@ -61,13 +60,12 @@
               <img class="search-avatar-img mr-2" src="https://randomuser.me/api/portraits/men/6.jpg" alt=""> John Doe
             </div>
             <div class="flex items-center text-gray-500 text-sm">
-              <div class="mr-2"><font-awesome-icon class="mr-1 panel-menu-icon" :icon="['fas', 'eye']"/>1.5k</div>
-              <div class="mr-2"><font-awesome-icon class="mr-1 panel-menu-icon" :icon="['fas', 'comments']"/>8</div>
-              <div class="mr-2"><font-awesome-icon class="mr-1 panel-menu-icon" :icon="['fas', 'star']"/>3.6</div>
+              <div class="mr-2"><font-awesome-icon class="mr-1 h-4 panel-menu-icon" :icon="['fas', 'eye']"/>1.5k</div>
+              <div class="mr-2"><font-awesome-icon class="mr-1 h-4 panel-menu-icon" :icon="['fas', 'comments']"/>8</div>
+              <div class="mr-2"><font-awesome-icon class="mr-1 h-4 panel-menu-icon" :icon="['fas', 'star']"/>3.6</div>
             </div>
           </div>
         </div>
-
         <div class="search-item shadow">
           <div class="search-item-img">
             <img class="object-cover object-center" src="~/static/images/dron-8.png" alt="">
@@ -78,13 +76,12 @@
               <img class="search-avatar-img mr-2" src="https://randomuser.me/api/portraits/men/6.jpg" alt=""> John Doe
             </div>
             <div class="flex items-center text-gray-500 text-sm">
-              <div class="mr-2"><font-awesome-icon class="mr-1 panel-menu-icon" :icon="['fas', 'eye']"/>1.5k</div>
-              <div class="mr-2"><font-awesome-icon class="mr-1 panel-menu-icon" :icon="['fas', 'comments']"/>8</div>
-              <div class="mr-2"><font-awesome-icon class="mr-1 panel-menu-icon" :icon="['fas', 'star']"/>3.6</div>
+              <div class="mr-2"><font-awesome-icon class="mr-1 h-4 panel-menu-icon" :icon="['fas', 'eye']"/>1.5k</div>
+              <div class="mr-2"><font-awesome-icon class="mr-1 h-4 panel-menu-icon" :icon="['fas', 'comments']"/>8</div>
+              <div class="mr-2"><font-awesome-icon class="mr-1 h-4 panel-menu-icon" :icon="['fas', 'star']"/>3.6</div>
             </div>
           </div>
         </div>
-
         <div class="search-item shadow">
           <div class="search-item-img">
             <img class="object-cover object-center" src="~/static/images/dron-8.png" alt="">
@@ -95,13 +92,12 @@
               <img class="search-avatar-img mr-2" src="https://randomuser.me/api/portraits/men/6.jpg" alt=""> John Doe
             </div>
             <div class="flex items-center text-gray-500 text-sm">
-              <div class="mr-2"><font-awesome-icon class="mr-1 panel-menu-icon" :icon="['fas', 'eye']"/>1.5k</div>
-              <div class="mr-2"><font-awesome-icon class="mr-1 panel-menu-icon" :icon="['fas', 'comments']"/>8</div>
-              <div class="mr-2"><font-awesome-icon class="mr-1 panel-menu-icon" :icon="['fas', 'star']"/>3.6</div>
+              <div class="mr-2"><font-awesome-icon class="mr-1 h-4 panel-menu-icon" :icon="['fas', 'eye']"/>1.5k</div>
+              <div class="mr-2"><font-awesome-icon class="mr-1 h-4 panel-menu-icon" :icon="['fas', 'comments']"/>8</div>
+              <div class="mr-2"><font-awesome-icon class="mr-1 h-4 panel-menu-icon" :icon="['fas', 'star']"/>3.6</div>
             </div>
           </div>
         </div>
-
         <div class="search-item shadow">
           <div class="search-item-img">
             <img class="object-cover object-center" src="~/static/images/dron-8.png" alt="">
@@ -112,13 +108,12 @@
               <img class="search-avatar-img mr-2" src="https://randomuser.me/api/portraits/men/6.jpg" alt=""> John Doe
             </div>
             <div class="flex items-center text-gray-500 text-sm">
-              <div class="mr-2"><font-awesome-icon class="mr-1 panel-menu-icon" :icon="['fas', 'eye']"/>1.5k</div>
-              <div class="mr-2"><font-awesome-icon class="mr-1 panel-menu-icon" :icon="['fas', 'comments']"/>8</div>
-              <div class="mr-2"><font-awesome-icon class="mr-1 panel-menu-icon" :icon="['fas', 'star']"/>3.6</div>
+              <div class="mr-2"><font-awesome-icon class="mr-1 h-4 panel-menu-icon" :icon="['fas', 'eye']"/>1.5k</div>
+              <div class="mr-2"><font-awesome-icon class="mr-1 h-4 panel-menu-icon" :icon="['fas', 'comments']"/>8</div>
+              <div class="mr-2"><font-awesome-icon class="mr-1 h-4 panel-menu-icon" :icon="['fas', 'star']"/>3.6</div>
             </div>
           </div>
         </div>
-
         <div class="search-item shadow">
           <div class="search-item-img">
             <img class="object-cover object-center" src="~/static/images/dron-8.png" alt="">
@@ -129,13 +124,12 @@
               <img class="search-avatar-img mr-2" src="https://randomuser.me/api/portraits/men/6.jpg" alt=""> John Doe
             </div>
             <div class="flex items-center text-gray-500 text-sm">
-              <div class="mr-2"><font-awesome-icon class="mr-1 panel-menu-icon" :icon="['fas', 'eye']"/>1.5k</div>
-              <div class="mr-2"><font-awesome-icon class="mr-1 panel-menu-icon" :icon="['fas', 'comments']"/>8</div>
-              <div class="mr-2"><font-awesome-icon class="mr-1 panel-menu-icon" :icon="['fas', 'star']"/>3.6</div>
+              <div class="mr-2"><font-awesome-icon class="mr-1 h-4 panel-menu-icon" :icon="['fas', 'eye']"/>1.5k</div>
+              <div class="mr-2"><font-awesome-icon class="mr-1 h-4 panel-menu-icon" :icon="['fas', 'comments']"/>8</div>
+              <div class="mr-2"><font-awesome-icon class="mr-1 h-4 panel-menu-icon" :icon="['fas', 'star']"/>3.6</div>
             </div>
           </div>
         </div>
-
         <div class="search-item shadow">
           <div class="search-item-img">
             <img class="object-cover object-center" src="~/static/images/dron-8.png" alt="">
@@ -146,13 +140,12 @@
               <img class="search-avatar-img mr-2" src="https://randomuser.me/api/portraits/men/6.jpg" alt=""> John Doe
             </div>
             <div class="flex items-center text-gray-500 text-sm">
-              <div class="mr-2"><font-awesome-icon class="mr-1 panel-menu-icon" :icon="['fas', 'eye']"/>1.5k</div>
-              <div class="mr-2"><font-awesome-icon class="mr-1 panel-menu-icon" :icon="['fas', 'comments']"/>8</div>
-              <div class="mr-2"><font-awesome-icon class="mr-1 panel-menu-icon" :icon="['fas', 'star']"/>3.6</div>
+              <div class="mr-2"><font-awesome-icon class="mr-1 h-4 panel-menu-icon" :icon="['fas', 'eye']"/>1.5k</div>
+              <div class="mr-2"><font-awesome-icon class="mr-1 h-4 panel-menu-icon" :icon="['fas', 'comments']"/>8</div>
+              <div class="mr-2"><font-awesome-icon class="mr-1 h-4 panel-menu-icon" :icon="['fas', 'star']"/>3.6</div>
             </div>
           </div>
         </div>
-
         <div class="search-item shadow">
           <div class="search-item-img">
             <img class="object-cover object-center" src="~/static/images/dron-8.png" alt="">
@@ -163,12 +156,14 @@
               <img class="search-avatar-img mr-2" src="https://randomuser.me/api/portraits/men/6.jpg" alt=""> John Doe
             </div>
             <div class="flex items-center text-gray-500 text-sm">
-              <div class="mr-2"><font-awesome-icon class="mr-1 panel-menu-icon" :icon="['fas', 'eye']"/>1.5k</div>
-              <div class="mr-2"><font-awesome-icon class="mr-1 panel-menu-icon" :icon="['fas', 'comments']"/>8</div>
-              <div class="mr-2"><font-awesome-icon class="mr-1 panel-menu-icon" :icon="['fas', 'star']"/>3.6</div>
+              <div class="mr-2"><font-awesome-icon class="mr-1 h-4 panel-menu-icon" :icon="['fas', 'eye']"/>1.5k</div>
+              <div class="mr-2"><font-awesome-icon class="mr-1 h-4 panel-menu-icon" :icon="['fas', 'comments']"/>8</div>
+              <div class="mr-2"><font-awesome-icon class="mr-1 h-4 panel-menu-icon" :icon="['fas', 'star']"/>3.6</div>
             </div>
           </div>
         </div>
+
+
 
       </div>
 

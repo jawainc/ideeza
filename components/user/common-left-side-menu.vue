@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-between  p-10 bg-white h-full shadow left-side-bar">
+  <div class="flex flex-col  p-10 bg-white h-full shadow left-side-bar">
 
       <!--Left Menu-->
       <div class="mt-10 left-main-menu ">
