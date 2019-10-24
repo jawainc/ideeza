@@ -125,7 +125,9 @@ select{
 .btn-text-bold{
   @apply font-semibold;
 }
-
+.btn--rounded{
+  @apply rounded-lg;
+}
 .pill-button{
   @apply rounded-full border-gray-500 bg-gray-200 text-gray-700 leading-loose;
 }

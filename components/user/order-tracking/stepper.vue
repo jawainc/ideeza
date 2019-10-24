@@ -6,17 +6,17 @@
         <div class="absolute top-0 left-0 h-full w-full z-50 flex justify-between">
 
           <!--1-->
-          <div class="stepper-icon-wrapper relative active" :class="{'active': trackStep === 0}">
+          <div class="stepper-icon-wrapper relative active" :class="{'active': trackStep === 0, 'done': trackStep > 0}">
             <StepOne class="fill-current absolute-center-h-v" />
             <div class="stepper-text stepper-text--step1" >Making Product</div>
           </div>
           <!--2-->
-          <div class="stepper-icon-wrapper relative" :class="{'active': trackStep === 1}">
+          <div class="stepper-icon-wrapper relative" :class="{'active': trackStep === 1, 'done': trackStep > 1}">
             <StepTwo class="fill-current absolute-center-h-v" />
             <div class="stepper-text stepper-text--step2" >Delivery</div>
           </div>
           <!--3-->
-          <div class="stepper-icon-wrapper relative" :class="{'active': trackStep === 2}">
+          <div class="stepper-icon-wrapper relative" :class="{'active': trackStep === 2, 'done': trackStep > 2}">
             <StepThree class="fill-current absolute-center-h-v" />
             <div class="stepper-text stepper-text--step3" >Pick up</div>
           </div>
@@ -48,10 +48,10 @@
     },
     computed: {
       overlayWidth () {
-        if(this.$store.state.trackstepper.trackStep < 0)
+        if(this.$store.state.trackstepper.trackStep <= 0)
           return 0;
 
-        return this.$store.state.trackstepper.trackStep * 25;
+        return this.$store.state.trackstepper.trackStep * 33.33;
       },
       trackStep () {
         return this.$store.state.trackstepper.trackStep;
@@ -105,6 +105,9 @@
   .stepper-icon-wrapper.done .stepper-text,
   .stepper-icon-wrapper.active .stepper-text{
     @apply text-gray-800;
+  }
+  .stepper-icon-wrapper.done .stepper-text{
+    @apply text-ideeza;
   }
   .stepper-text--step1{
     margin-left: -30px;
