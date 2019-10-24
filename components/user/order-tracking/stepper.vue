@@ -51,7 +51,7 @@
         if(this.$store.state.trackstepper.trackStep <= 0)
           return 0;
 
-        return this.$store.state.trackstepper.trackStep * 33.33;
+        return this.$store.state.trackstepper.trackStep * 33;
       },
       trackStep () {
         return this.$store.state.trackstepper.trackStep;

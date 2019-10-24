@@ -29,7 +29,7 @@
         </div>
 
         <div v-if="trackStep === 3" class="mt-10 flex flex-col justify-center items-center">
-          <nuxt-link to="/user/" class="btn btn-normal btn--ideeza btn-text-bold btn--rounded px-16 py-6 text-lg">
+          <nuxt-link to="/user/dashboard" class="btn btn-normal btn--ideeza btn-text-bold btn--rounded px-16 py-6 text-lg">
             Return to home page
           </nuxt-link>
         </div>
