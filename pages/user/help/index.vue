@@ -15,17 +15,17 @@
       </div>
 
       <!--Big Buttons-->
-      <div class="big-buttons-container flex flex-wrap lg:flex-no-wrap justify-between mt-10 lg:mt-32">
-        <div class="big-button">
+      <div class="big-buttons-container flex flex-wrap mt-8 lg:mt-16 xl:mt-32">
+        <div class="big-button mr-5 xl:mt-0 lg:mt-5">
           <span class="text-center absolute-center-v w-full block">Getting Started</span>
         </div>
-        <div class="big-button">
+        <div class="big-button mr-5">
           <span class="text-center absolute-center-v w-full block">Knowledge Base</span>
         </div>
-        <div class="big-button">
+        <div class="big-button mr-5">
           <span class="text-center absolute-center-v w-full block">Forum</span>
         </div>
-        <div class="big-button">
+        <div class="big-button mr-5">
           <span class="text-center absolute-center-v w-full block">News</span>
         </div>
       </div>
@@ -192,7 +192,6 @@
   }
   .big-buttons-container{
     width: 100%;
-    max-width: 1330px;
   }
   .big-button{
     @apply mt-5 relative shadow-md bg-white border border-solid border-gray-300 font-semibold text-gray-800 text-xl cursor-pointer;
@@ -211,9 +210,9 @@
 
   @screen lg{
     .big-button{
-      @apply text-4xl;
-      width: 320px;
-      height: 320px;
+      @apply text-2xl;
+      width: 250px;
+      height: 250px;
     }
 
     .faq-wrapper{
@@ -224,5 +223,13 @@
       @apply my-5;
     }
 
+  }
+
+  @screen xl{
+    .big-button{
+      @apply text-3xl;
+      width: 290px;
+      height: 290px;
+    }
   }
 </style>

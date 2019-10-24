@@ -1,9 +1,9 @@
 <template>
-  <div :class="{'hide-left-bar':!leftMenu}" class="flex builder-panel main-panel">
+  <div :class="{'hide-left-bar':!leftMenu}" class="flex main-panel">
     <!--  Left Side Bar  -->
     <LeftMenu/>
     <!-- Main Contents -->
-    <div class="flex-grow lg:p-10">
+    <div class="builder-panel flex-grow lg:p-10">
       <!--Panel Menu-->
       <div class="flex justify-between flex-col lg:flex-row border-b border-gray-400 pl-5 pr-5 lg:pl-0 lg:pr-0 pb-3">
         <div class="text-xl font-bold m-3 lg:m-0 text-center lg:text-left">Lamborghini Aventado Project</div>
@@ -26,7 +26,7 @@
 
           <div class="flex items-center mt-5 lg:mt-0">
             <div>
-              <button class="btn btn-normal text-ideeza font-semibold p-2"><font-awesome-icon class="mr-1 h-4" :icon="['fas', 'shopping-cart']"/> Buy now</button>
+              <nuxt-link to="/user/cart/overview" class="btn btn-normal text-ideeza font-semibold p-2"><font-awesome-icon class="mr-1 h-4" :icon="['fas', 'shopping-cart']"/> Buy now</nuxt-link>
             </div>
             <div class="mx-5 text-sm text-gray-500 font-semibold">
               <font-awesome-icon class="mr-1 h-4" :icon="['fas', 'eye']"/> 2.8k

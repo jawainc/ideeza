@@ -10,7 +10,7 @@
     </div>
 
     <div class="text-center">
-      <button class="btn pill-button pill-button--ideeza px-8 py-2">Track your order</button>
+      <nuxt-link to="/user/order-tracking/making-product" class="btn pill-button pill-button--ideeza px-8 py-2">Track your order</nuxt-link>
     </div>
   </div>
 </template>

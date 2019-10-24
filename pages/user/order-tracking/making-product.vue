@@ -186,6 +186,7 @@
 
 <style scoped>
   .making-container{
+    @apply px-2;
     width: 100%;
     max-width: 370px;
   }

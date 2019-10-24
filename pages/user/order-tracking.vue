@@ -4,7 +4,7 @@
     <LeftMenu/>
 
     <!-- Main Contents -->
-    <div class="support-container flex-grow lg:pt-10 lg:pl-10">
+    <div class="support-container flex-grow lg:pt-10 lg:px-2 xl:pl-10">
 
       <h1 class="mb-20 text-gray-800 text-2xl lg:text-4xl lg:mt-10 font-semibold">Order Tracking</h1>
       <Stepper  />

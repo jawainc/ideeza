@@ -4,7 +4,7 @@
     <LeftMenu/>
 
     <!-- Main Contents -->
-    <div class="support-container flex-grow lg:pt-10 lg:pl-20">
+    <div class="support-container flex-grow lg:pt-10 lg:px-5 xl:px-20">
 
       <h1 class="text-gray-800 text-2xl lg:text-4xl lg:mt-10 font-semibold">Support Center</h1>
 

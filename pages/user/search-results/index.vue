@@ -4,7 +4,7 @@
     <LeftMenu/>
 
     <!-- Main Contents -->
-    <div class="search-panel flex-grow lg:pt-10 lg:pl-20">
+    <div class="search-panel flex-grow lg:pt-10 px-2 lg:px-5 xl:px-10">
       <div class="pb-5 border-b border-solid border-gray-400 lg:flex justify-between items-center">
         <div class="flex mt-5 ml-2 lg:ml-0 lg:mt-0">
           <div class="font-semibold text-lg text-ideeza mr-5">Models</div>
