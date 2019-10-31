@@ -2,16 +2,16 @@
     <div @click.self="close" class="popup-overlay">
       <div class="popup-overlay--contents add-new-container">
         <!--Header-->
-        <div class="flex justify-between">
-          <input type="text" class="outline-none border-0 text-ideeza text-xl placeholder-ideeza lg:w-1/2" placeholder="Add Project Name..." >
+        <div class="flex justify-between border-b-2 border-solid border-ideeza pb-5 px-20 pt-20">
+          <input type="text" class="outline-none border-0 text-ideeza text-xl placeholder-ideeza lg:w-1/2" placeholder="Add new task...." >
           <font-awesome-icon @click="close" class="mr-1 h-4 cursor-pointer text-gray-500 hover:text-gray-800" :icon="['fas', 'times']"/>
         </div>
 
         <!--Contents-->
-        <div class="mt-10 flex">
+        <div class="p-20 mt-10 flex">
           <div class="lg:w-1/2" >
             <div class="flex justify-between items-center">
-              <h1 class="text-ideeza-dark font-semibold">Project Description</h1>
+              <h1 class="text-ideeza-dark font-semibold">Task Description</h1>
               <div class="flex items-center  text-gray-500 hover:text-gray-800 cursor-pointer">
                 <span class="text-sm inline-block mr-1">Edit</span>
                 <font-awesome-icon @click="close" class="mr-1 h-3" :icon="['fas', 'pen']"/>
@@ -21,12 +21,15 @@
             <div class="mt-5">
               <TextAreaField rows="5" placeholder="Add project description here ...." />
             </div>
-            <button class="mt-5 btn btn-normal btn--ideeza px-6 py-2">Add Task +</button>
+            <div class="mt-10">
+              <span class="inline-block mb-2">Attach</span>
+              <FileField />
+            </div>
           </div>
 
           <div class="lg:ml-20">
             <div class="flex items-center">
-              <span class="text-gray-800 inline-block">Project Duration</span>
+              <span class="text-gray-800 inline-block">Task Duration</span>
               <!--Calendar-->
               <vc-date-picker v-model="dateRange" color="pink" mode='range' value=""
                            :popover="{ placement: 'bottom', visibility: 'click' }" >
@@ -79,8 +82,10 @@
             </div>
 
             <div class="mt-10">
-              <span class="inline-block mb-2">Attach</span>
-              <FileField />
+              Notification center: <button @click.self="showNotifications = true" class="ml-5 btn btn-small btn--ideeza px-2 text-xs">Compose <font-awesome-icon class="ml-2 h-3 text-white" :icon="['fas', 'paper-plane']"/></button>
+            </div>
+            <div class="mt-10 rounded-lg p-5 bg-gray-200">
+              <span class="text-xs">Inbox is empty</span>
             </div>
           </div>
         </div>
@@ -101,6 +106,7 @@
         return {
           dateRange: null,
           showMembers: false,
+          showNotifications: false,
           markStatusData: ['Waiting', 'Active', 'Completed', 'Over Due']
         }
       },
@@ -125,7 +131,7 @@
 
 <style scoped>
   .add-new-container{
-    @apply w-full h-full p-20;
+    @apply w-full h-full;
     max-width: 1300px;
     max-height: 900px;
   }

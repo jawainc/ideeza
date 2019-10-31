@@ -86,6 +86,8 @@ svg,
   transform: translate(-50%, -50%);
 }
 
+
+
 /*Transition*/
 .page-enter-active, .page-leave-active {
   transition: opacity .5s;
