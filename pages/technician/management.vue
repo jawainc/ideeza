@@ -9,16 +9,20 @@
 
         <!--Header Bar-->
         <div class="header-bar lg:flex items-center">
-           <nuxt-link class="header-menu" to="/technician/management/user-services">
+           <nuxt-link class="header-menu" to="/technician/management/user-service-providers">
              <font-awesome-icon class="mr-5 h-6 inline text-xl" :icon="['fas', 'users-cog']"/> User & Service Providers
            </nuxt-link>
 
-          <nuxt-link class="header-menu" to="/technician/management/add-parts">
+          <nuxt-link class="header-menu" to="/technician/management/added-parts">
             <font-awesome-icon class="mr-5 h-6 inline text-xl" :icon="['fas', 'puzzle-piece']"/> Added Parts
           </nuxt-link>
 
           <nuxt-link class="header-menu" to="/technician/management/categories">
             <font-awesome-icon class="mr-5 h-6 inline text-xl" :icon="['fas', 'sitemap']"/> Categories
+          </nuxt-link>
+
+          <nuxt-link class="header-menu" to="/technician/management/questions">
+            <font-awesome-icon class="mr-5 h-6 inline text-xl" :icon="['fas', 'clipboard-list']"/> Question Algorithm
           </nuxt-link>
 
           <nuxt-link class="header-menu" to="/technician/management/projects">
