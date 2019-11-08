@@ -55,6 +55,7 @@
 <script>
   import  DropDownField from '~/components/form/dropdown-field.vue'
     import LeftMenu from '~/components/technician/common-left-side-menu.vue'
+  import 'codemirror/theme/base16-dark.css'
 
     export default {
         layout: 'technician',
