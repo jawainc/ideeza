@@ -37,6 +37,12 @@
       </nuxt-link>
     </div>
 
+    <div class="menu-item">
+      <nuxt-link to="/technician/messages">
+        <font-awesome-icon class="mr-5 h-6 inline text-xl" :icon="['fas', 'comments']"/> Messages
+      </nuxt-link>
+    </div>
+
   </div>
 </template>
 
