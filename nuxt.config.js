@@ -27,11 +27,11 @@ export default {
     // CSS file in the project
     '@/assets/css/main.css',
     // lib css
-    '@/assets/css/codemirror.css',
+    'codemirror/lib/codemirror.css',
     // merge css
-    '@/assets/css/merge.css',
+    'codemirror/addon/merge/merge.css',
     // theme css
-    '@/assets/css/base16-dark.css',
+    'codemirror/theme/base16-dark.css'
 
   ],
   /*
@@ -40,7 +40,7 @@ export default {
   plugins: [
     { src: '~/plugins/datepicker', ssr: false },
     { src: '~/plugins/clickoutside', ssr: false },
-    { src: '~plugins/nuxt-codemirror-plugin.js', ssr: false }
+    { src: '~/plugins/nuxt-codemirror-plugin.js', ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules

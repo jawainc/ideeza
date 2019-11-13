@@ -1,6 +1,5 @@
 import Vue from 'vue'
-
-
+import VueCodemirror from 'vue-codemirror'
 
 // language
 import 'codemirror/mode/vue/vue.js'
@@ -38,14 +37,4 @@ import 'codemirror/addon/fold/indent-fold.js'
 import 'codemirror/addon/fold/markdown-fold.js'
 import 'codemirror/addon/fold/xml-fold.js'
 
-import 'codemirror/lib/codemirror.css'
-  // merge css
-import  '~/assets/css/merge.css'
-  // theme css
-  import '~/assets/css/base16-dark.css'
-// more...
-
-if (process.browser) {
-  const VueCodemirror = require('vue-codemirror')
-  Vue.use(VueCodemirror)
-}
+Vue.use(VueCodemirror)
