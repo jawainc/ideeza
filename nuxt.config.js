@@ -25,11 +25,11 @@ export default {
   */
   css: [
     // lib css
-    'codemirror/lib/codemirror.css',
+    '@/assets/css/codemirror.css',
     // merge css
-    'codemirror/addon/merge/merge.css',
+    '@/assets/css/merge.css',
     // theme css
-    'codemirror/theme/base16-dark.css',
+    '@/assets/css/base16-dark.css',
     // CSS file in the project
     '@/assets/css/main.css',
 
