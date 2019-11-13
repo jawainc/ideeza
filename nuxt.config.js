@@ -26,13 +26,6 @@ export default {
   css: [
     // CSS file in the project
     '@/assets/css/main.css',
-    // lib css
-    'codemirror/lib/codemirror.css',
-    // merge css
-    'codemirror/addon/merge/merge.css',
-    // theme css
-    'codemirror/theme/base16-dark.css'
-
   ],
   /*
   ** Plugins to load before mounting the App
