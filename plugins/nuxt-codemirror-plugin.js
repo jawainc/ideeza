@@ -40,9 +40,9 @@ import 'codemirror/addon/fold/xml-fold.js'
 
 import 'codemirror/lib/codemirror.css'
   // merge css
-import  '@/assets/css/merge.css'
+import  '~/assets/css/merge.css'
   // theme css
-  import '@/assets/css/base16-dark.css'
+  import '~/assets/css/base16-dark.css'
 // more...
 
 if (process.browser) {

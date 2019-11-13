@@ -24,14 +24,14 @@ export default {
   ** Global CSS
   */
   css: [
+    // CSS file in the project
+    '@/assets/css/main.css',
     // lib css
     '@/assets/css/codemirror.css',
     // merge css
     '@/assets/css/merge.css',
     // theme css
     '@/assets/css/base16-dark.css',
-    // CSS file in the project
-    '@/assets/css/main.css',
 
   ],
   /*
