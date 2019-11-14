@@ -70,45 +70,6 @@
 
     </div>
 
-
-
-    <!---->
-    <!--Additional Information-->
-    <!---->
-    <div class="md:flex justify-between items-center pb-3 mt-20 border-b border-solid border-gray-400 p-5 lg:p-0">
-      <h1 class="text-gray-800 text-xl lg:text-3xl font-semibold">Business Information</h1>
-      <span class="text-gray-500 text-sm lg:text-2xl">* Required</span>
-    </div>
-
-    <!--Form Container-->
-    <div class="my-5 p-5 bg-white shadow-md">
-
-      <!--Form Fields-->
-
-
-      <div class="form-field ">
-        <div class="field-label" >Line of business</div>
-        <div class="field-input flex-grow">
-          <select class="field h-10" >
-            <option value="male">Electronics, Cover</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="form-field ">
-        <div class="field-label" >Expertise</div>
-        <div class="field-input flex-grow">
-          <select class="field h-10" >
-            <option value="male">Fabrication, Assembly, Dealer Tester, CNC Plastic</option>
-          </select>
-        </div>
-      </div>
-
-
-
-    </div>
-
-
     <!---->
     <!--Profile Phote-->
     <!---->

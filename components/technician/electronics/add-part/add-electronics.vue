@@ -25,12 +25,34 @@
       </h1>
     </div>
 
-    <div class="flex mb-10 justify-between w-full">
+    <div v-if="showSelection" class="w-full flex justify-between mt-10">
+      <div class="w-48 ">
+        <div class="container-part-add">
+          <img src="~/static/images/e-chip.png" alt="">
+
+          <button @click="legMeaning" class="btn pill-button px-24 py-0 mt-10">Leg Meaning</button>
+        </div>
+
+      </div>
+
+      <div class="w-48">
+        <div class="container-part-add">
+          <div class="w-full flex flex-col items-center ">
+            <img src="~/static/images/e-bar-chart.png" alt="">
+
+            <button @click="addChart"  class="btn pill-button px-32 py-0 mt-10">Chart</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div v-if="!showSelection" class="flex mb-10 justify-between w-full">
       <div @click="electronic = 'leg'" :class="{'active': electronic === 'leg'}" class="big-button">Leg Meaning</div>
       <div @click="electronic = 'chart'" :class="{'active': electronic === 'chart'}" class="big-button">Chart</div>
     </div>
 
-    <div class="flex">
+    <div v-if="!showSelection" class="flex">
       <div class="w-3/5 ">
 
         <div class="shadow-md bg-white">
@@ -139,6 +161,7 @@
         name: "add-electronics",
         data: () => {
             return {
+                showSelection: true,
                 electronic: 'leg',
                 legs: [
                     {id: 1},
@@ -166,12 +189,27 @@
             },
             addChartValue() {
                 this.chartVals.push({id: 1});
+            },
+            legMeaning() {
+              this.electronic = 'leg';
+              this.showSelection = false;
+            },
+            addChart() {
+              this.electronic = 'chart';
+              this.showSelection = false;
             }
         }
     }
 </script>
 
 <style scoped>
+  .w-48{
+    width: 48%;
+  }
+  .container-part-add {
+    @apply shadow-md mt-2 w-full bg-white flex flex-col items-center justify-center;
+    height: 300px;
+  }
   .view-container{
     height: 400px;
   }

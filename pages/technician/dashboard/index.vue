@@ -17,6 +17,7 @@
               </div>
               <div class="flex justify-between items-center content-center ">
                 <div class="text-gray-800 text-semibold text-xl lg:text-6xl">56</div>
+                <img src="~/static/images/opened-tickets.png" class="object-center object-right" alt="">
               </div>
             </div>
           </div>
@@ -30,11 +31,12 @@
               </div>
               <div class="flex justify-between items-center content-center ">
                 <div class="text-gray-800 text-semibold text-xl lg:text-6xl">26</div>
+                <img src="~/static/images/un-opened-tickets.png" class="object-center object-right" alt="">
               </div>
             </div>
           </div>
 
-          <div class="card-container mt-5 lg:mt-0">
+          <div class="card-container mt-5 lg:mr-5 lg:mt-0">
             <h1 class="text-xl font-semibold text-gar-800 pl-3 lg:pl-0">On Hold Tickets</h1>
             <div class="status-card bg-white shadow-md mt-5 p-3">
               <div class="text-right">
@@ -42,6 +44,7 @@
               </div>
               <div class="flex justify-between items-center content-center ">
                 <div class="text-gray-800 text-semibold text-xl lg:text-6xl">32</div>
+                <img src="~/static/images/on-hold-tickets.png" class="object-center object-right" alt="">
               </div>
             </div>
           </div>
@@ -54,6 +57,7 @@
               </div>
               <div class="flex justify-between items-center content-center ">
                 <div class="text-gray-800 text-semibold text-xl lg:text-6xl">256</div>
+                <img src="~/static/images/finished-tickets.png" class="object-center object-right" alt="">
               </div>
             </div>
           </div>

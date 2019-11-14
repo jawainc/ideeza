@@ -25,7 +25,9 @@
       <tbody>
       <tr class="bg-ideeza-100">
         <td >
-          Iron Making
+          <nuxt-link to="/technician/management/projects/detail">
+            Iron Making
+          </nuxt-link>
         </td>
         <td>
           <img class="avatar" src="https://randomuser.me/api/portraits/women/20.jpg">
@@ -42,7 +44,9 @@
       </tr>
       <tr class="">
         <td >
-          Iron Making
+          <nuxt-link to="/technician/management/projects/detail">
+            Iron Making
+          </nuxt-link>
         </td>
         <td>
           <img class="avatar" src="https://randomuser.me/api/portraits/women/20.jpg">
@@ -59,7 +63,9 @@
       </tr>
       <tr class="bg-ideeza-100">
         <td >
-          Iron Making
+          <nuxt-link to="/technician/management/projects/detail">
+            Iron Making
+          </nuxt-link>
         </td>
         <td>
           <img class="avatar" src="https://randomuser.me/api/portraits/women/20.jpg">
@@ -76,7 +82,9 @@
       </tr>
       <tr class="">
         <td >
-          Iron Making
+          <nuxt-link to="/technician/management/projects/detail">
+            Iron Making
+          </nuxt-link>
         </td>
         <td>
           <img class="avatar" src="https://randomuser.me/api/portraits/women/20.jpg">
