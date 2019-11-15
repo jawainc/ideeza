@@ -8,7 +8,61 @@
         </div>
         <div class="flex items-center mr-5">
           <span class="mr-2">Language </span>
-          <DropDownField styleHeight="tiny" class="w-32"  />
+          <select v-model="selectedLanguage" @change="languageChange"  class="language-select">
+            <option  value="text/x-bashsrc" >
+            Bash
+          </option><option selected  value="text/x-csrc" >
+            C
+          </option><option  value="text/x-c++src" >
+            C++
+          </option><option  value="text/x-python" >
+            Python
+          </option><option  value="text/x-clojure" >
+            Clojure
+          </option><option  value="text/x-cobol" >
+            Cobol
+          </option><option  value="text/x-coffeescript" >
+            CoffeeScript
+          </option><option  value="text/x-d" >
+            D
+          </option><option  value="text/x-elixir" >
+            Elixir
+          </option><option  value="text/x-erlang" >
+            Erlang
+          </option><option  value="text/x-f" >
+            F#
+          </option><option  value="text/X-Go" >
+            Go
+          </option><option  value="text/x-hs" >
+            Haskell
+          </option><option  value="text/x-java" >
+            Java
+          </option><option  value="Text/Javascript" >
+            Javascript
+          </option><option  value="text/x-kotlin" >
+            Kotlin
+          </option><option  value="text/x-mysql" >
+            MySQL
+          </option><option  value="text/x-perl" >
+            Perl
+          </option><option  value="text/x-php" >
+            PHP
+          </option><option  value="text/x-r" >
+            R
+          </option><option  value="text/x-ruby" >
+            Ruby
+          </option><option  value="text/x-rust" >
+            Rust
+          </option><option  value="text/x-scala" >
+            Scala
+          </option><option  value="text/x-scheme" >
+            Scheme
+          </option><option  value="text/x-swift" >
+            Swift
+          </option><option  value="text/x-vb" >
+            VB
+          </option>
+          </select>
         </div>
         <button class="btn pill-button px-5 mr-5">Upload Code</button>
         <button class="btn pill-button px-5 mr-5">Upload Image</button>
@@ -18,11 +72,7 @@
     <div>
 
         <codemirror v-model="code"
-                    :options="cmOption"
-                    @cursorActivity="onCmCursorActivity"
-                    @ready="onCmReady"
-                    @focus="onCmFocus"
-                    @blur="onCmBlur">
+                    :options="cmOption">
         </codemirror>
 
     </div>
@@ -34,6 +84,7 @@
 <script>
     import 'codemirror/theme/base16-dark.css'
     import  DropDownField from '~/components/form/dropdown-field.vue'
+    import Languages from '~/static/data/languages.js'
     export default {
         name: "add-code",
         components: {
@@ -59,7 +110,8 @@
                             if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false)
                         }
                     }
-                }
+                },
+              selectedLanguage: 'text/x-csrc'
             }
         },
         methods: {
@@ -74,7 +126,10 @@
             },
             onCmBlur(codemirror) {
                 console.log('onCmBlur', codemirror)
-            }
+            },
+          languageChange() {
+              this.cmOption.mode = this.selectedLanguage;
+          }
         }
     }
 </script>
@@ -175,7 +230,7 @@
     100% {}
   }
 
-  /* Can style cursor different in overwrite (non-insert) mode */
+  /* Can style cursor different in overwrite (non-insert) value */
   .CodeMirror-overwrite .CodeMirror-cursor {}
 
   .cm-tab { display: inline-block; text-decoration: inherit; }

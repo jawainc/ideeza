@@ -2,7 +2,8 @@ import Vue from 'vue'
 import VueCodemirror from 'vue-codemirror'
 
 // language
-import 'codemirror/mode/vue/vue.js'
+
+import 'codemirror/mode/clike/clike.js'
 
 // active-line.js
 import 'codemirror/addon/selection/active-line.js'
@@ -36,5 +37,8 @@ import 'codemirror/addon/fold/foldgutter.js'
 import 'codemirror/addon/fold/indent-fold.js'
 import 'codemirror/addon/fold/markdown-fold.js'
 import 'codemirror/addon/fold/xml-fold.js'
+
+// language js
+
 
 Vue.use(VueCodemirror)
