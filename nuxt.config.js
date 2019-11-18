@@ -14,6 +14,9 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap' }
+    ],
+    script: [
+      {src: '/ace/ace.js', body: true}
     ]
   },
   /*
@@ -33,7 +36,8 @@ export default {
   plugins: [
     { src: '~/plugins/datepicker', ssr: false },
     { src: '~/plugins/clickoutside', ssr: false },
-    { src: '~/plugins/nuxt-codemirror-plugin.js', ssr: false }
+    { src: '~/plugins/nuxt-codemirror-plugin.js', ssr: false },
+    { src: '~/plugins/ace-editor-plugin.js', ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules
