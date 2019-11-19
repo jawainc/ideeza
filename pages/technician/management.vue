@@ -13,11 +13,11 @@
              <font-awesome-icon class="mr-5 h-6 inline text-xl" :icon="['fas', 'users-cog']"/> User & Service Providers
            </nuxt-link>
 
-          <nuxt-link class="header-menu" to="/technician/management/added-parts">
+          <nuxt-link class="header-menu" to="/technician/management/added-parts/electronics">
             <font-awesome-icon class="mr-5 h-6 inline text-xl" :icon="['fas', 'puzzle-piece']"/> Added Parts
           </nuxt-link>
 
-          <nuxt-link class="header-menu" to="/technician/management/categories">
+          <nuxt-link class="header-menu" to="/technician/management/categories/electronics">
             <font-awesome-icon class="mr-5 h-6 inline text-xl" :icon="['fas', 'sitemap']"/> Categories
           </nuxt-link>
 

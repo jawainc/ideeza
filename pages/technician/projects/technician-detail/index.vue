@@ -1,5 +1,12 @@
 <template>
-    <div class="mt-10">
+  <div :class="{'hide-left-bar':!leftMenu}" class="flex main-panel">
+    <!--  Left Side Bar  -->
+    <LeftMenu/>
+
+    <!-- Main Contents -->
+    <div class="flex-grow">
+      <div class="main-contents">
+        <div class="mt-10">
       <div class="flex justify-between items-center border-b-4 border-solid border-ideeza pb-5">
         <div class="flex">
           <span class="text-ideeza-dark text-xl inline-block font-semibold mr-5">Project: Metal Making</span>
@@ -54,8 +61,8 @@
       <table class="mt-10 shadow-md">
         <thead>
         <tr class="text-white h16 gradient-bg">
-          <th class="text-left ">Tasks</th>
-          <th class="text-left">Assigned to</th>
+          <th class="text-left ">My Tasks</th>
+
           <th class="text-left">Due Date</th>
           <th class="text-left">Task Status</th>
           <th class="text-left">Notification</th>
@@ -66,11 +73,7 @@
           <td class="cursor-pointer" @click.self="editTask=true" >
             Iron Making
           </td>
-          <td>
-            <img class="avatar" src="https://randomuser.me/api/portraits/women/20.jpg">
-            <img class="avatar" src="https://randomuser.me/api/portraits/men/20.jpg">
-            <img class="avatar" src="https://randomuser.me/api/portraits/men/12.jpg">
-          </td>
+
           <td>05.05.2019</td>
           <td class="status status--completed">COMPLETED</td>
           <td class="notifications">
@@ -79,15 +82,11 @@
 
 
         </tr>
-        <tr class="cursor-pointer" @click.self="editTask=true">
-          <td >
+        <tr class="cursor-pointer" >
+          <td class="cursor-pointer" @click.self="editTask=true">
             Iron Making
           </td>
-          <td>
-            <img class="avatar" src="https://randomuser.me/api/portraits/women/20.jpg">
-            <img class="avatar" src="https://randomuser.me/api/portraits/men/20.jpg">
-            <img class="avatar" src="https://randomuser.me/api/portraits/men/12.jpg">
-          </td>
+
           <td>05.05.2019</td>
           <td class="status status--over">over due</td>
           <td class="notifications">
@@ -96,51 +95,16 @@
 
 
         </tr>
-        <tr class="bg-ideeza-100">
-          <td class="cursor-pointer" @click.self="editTask=true" >
-            Iron Making
-          </td>
-          <td>
-            <img class="avatar" src="https://randomuser.me/api/portraits/women/20.jpg">
-            <img class="avatar" src="https://randomuser.me/api/portraits/men/20.jpg">
-            <img class="avatar" src="https://randomuser.me/api/portraits/men/12.jpg">
-          </td>
-          <td>05.05.2019</td>
-          <td class="status status--progress">in progress</td>
-          <td class="notifications">
-            2 new notifications
-          </td>
 
-
-        </tr>
-        <tr class="">
-          <td class="cursor-pointer" @click.self="editTask=true" >
-            Iron Making
-          </td>
-          <td>
-            <img class="avatar" src="https://randomuser.me/api/portraits/women/20.jpg">
-            <img class="avatar" src="https://randomuser.me/api/portraits/men/20.jpg">
-            <img class="avatar" src="https://randomuser.me/api/portraits/men/12.jpg">
-          </td>
-          <td>05.05.2019</td>
-          <td class="status status--completed">COMPLETED</td>
-          <td class="notifications">
-            2 new notifications
-          </td>
-
-
-        </tr>
 
         </tbody>
       </table>
-      <button @click.self="addNewTask=true" class="btn btn-normal btn--ideeza-dark px-5 py-3 mt-5">Add New Task +</button>
 
 
-      <div class="mt-20">
+      <div class="mt-10">
         <div class="gradient-bg px-8 py-5 text-white">
           Timeline
         </div>
-
         <task-timeline />
 
       </div>
@@ -154,20 +118,34 @@
       <!--Edit task-->
       <edit-task @onClose="editTask=false" v-if="editTask" />
     </div>
+      </div>
+    </div>
+
+  </div>
 </template>
 
 <script>
+
+  import LeftMenu from '~/components/technician/common-left-side-menu.vue'
   import AddNewProject from "~/components/technician/management/new-project.vue"
   import AddNewTask from "~/components/technician/management/new-task.vue"
-  import EditTask from "~/components/technician/management/edit-task.vue"
+  import EditTask from "~/components/technician/management/edit-task-technician.vue"
   import TaskTimeLine from "~/components/technician/management/task-timeline.vue"
+
     export default {
         name: "detail",
       components: {
         'new-project': AddNewProject,
         'new-task': AddNewTask,
         'edit-task': EditTask,
-        'task-timeline': TaskTimeLine
+        'task-timeline': TaskTimeLine,
+        LeftMenu,
+
+      },
+      computed: {
+        leftMenu() {
+          return this.$store.state.usermenu.openLeftMenu;
+        }
       },
       data: function () {
         return {

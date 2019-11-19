@@ -77,7 +77,10 @@
 
               <div class="mt-5 w-full lg:flex justify-between items-center">
                 <div class="text-sm text-gray-600">
-                  Washing Machine Repairments
+                  <nuxt-link to="/technician/projects/technician-detail">
+                    Washing Machine Repairments
+                  </nuxt-link>
+
                 </div>
                 <div>
                   <img class="avatar" src="https://randomuser.me/api/portraits/women/20.jpg">
@@ -90,7 +93,9 @@
               </div>
               <div class="mt-5 w-full lg:flex justify-between items-center">
                 <div class="text-sm text-gray-600">
-                  Washing Machine Repairments
+                  <nuxt-link to="/technician/projects/technician-detail">
+                    Washing Machine Repairments
+                  </nuxt-link>
                 </div>
                 <div>
                   <img class="avatar" src="https://randomuser.me/api/portraits/women/20.jpg">
@@ -103,7 +108,9 @@
               </div>
               <div class="mt-5 w-full lg:flex justify-between items-center">
                 <div class="text-sm text-gray-600">
-                  Washing Machine Repairments
+                  <nuxt-link to="/technician/projects/technician-detail">
+                    Washing Machine Repairments
+                  </nuxt-link>
                 </div>
                 <div>
                   <img class="avatar" src="https://randomuser.me/api/portraits/women/20.jpg">
@@ -116,7 +123,9 @@
               </div>
               <div class="mt-5 w-full lg:flex justify-between items-center">
                 <div class="text-sm text-gray-600">
-                  Washing Machine Repairments
+                  <nuxt-link to="/technician/projects/technician-detail">
+                    Washing Machine Repairments
+                  </nuxt-link>
                 </div>
                 <div>
                   <img class="avatar" src="https://randomuser.me/api/portraits/women/20.jpg">
@@ -129,7 +138,9 @@
               </div>
               <div class="mt-5 w-full lg:flex justify-between items-center">
                 <div class="text-sm text-gray-600">
-                  Washing Machine Repairments
+                  <nuxt-link to="/technician/projects/technician-detail">
+                    Washing Machine Repairments
+                  </nuxt-link>
                 </div>
                 <div>
                   <img class="avatar" src="https://randomuser.me/api/portraits/women/20.jpg">
@@ -145,7 +156,7 @@
           </div>
 
           <div class="messages mt-5 lg:mt-0">
-            <h1 class="text-xl font-semibold text-gar-800 pl-3 lg:pl-0">Tak List</h1>
+            <h1 class="text-xl font-semibold text-gar-800 pl-3 lg:pl-0">Memos</h1>
             <div class="bg-white shadow-md mt-5 ">
               <div class="flex justify-between p-6">
                 <span class="text-gray-500 text-sm">2 tasks completed out of 10</span>
@@ -161,7 +172,10 @@
               <div class="p-6 border-t border-solid border-gray-300 flex justify-between items-center text-gray-600 hover:bg-ideeza-dark hover:text-white">
                 <div>
                   <span class="font-semibold text-sm block">
-                    Finish Electronics Part
+                    <nuxt-link to="/technician/tasklist">
+                      Finish Electronics Part
+                    </nuxt-link>
+
                   </span>
                   <span class="text-xs block">
                     10:30 AM - 12:40 PM
@@ -175,7 +189,9 @@
               <div class="p-6 border-t border-solid border-gray-300 flex justify-between items-center text-gray-600 hover:bg-ideeza-dark hover:text-white">
                 <div>
                   <span class="font-semibold text-sm block">
-                    Finish Electronics Part
+                    <nuxt-link to="/technician/tasklist">
+                      Finish Electronics Part
+                    </nuxt-link>
                   </span>
                   <span class="text-xs block">
                     10:30 AM - 12:40 PM
@@ -189,7 +205,9 @@
               <div class="p-6 border-t border-solid border-gray-300 flex justify-between items-center text-gray-600 hover:bg-ideeza-dark hover:text-white">
                 <div>
                   <span class="font-semibold text-sm block">
-                    Finish Electronics Part
+                    <nuxt-link to="/technician/tasklist">
+                      Finish Electronics Part
+                    </nuxt-link>
                   </span>
                   <span class="text-xs block">
                     10:30 AM - 12:40 PM

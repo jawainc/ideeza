@@ -37,7 +37,8 @@ export default {
     { src: '~/plugins/datepicker', ssr: false },
     { src: '~/plugins/clickoutside', ssr: false },
     { src: '~/plugins/nuxt-codemirror-plugin.js', ssr: false },
-    { src: '~/plugins/ace-editor-plugin.js', ssr: false }
+    { src: '~/plugins/ace-editor-plugin.js', ssr: false },
+    { src: '~/plugins/dragged-plugin.js', ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules

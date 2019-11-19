@@ -8,10 +8,12 @@
     </div>
 
     <div class="menu-item">
-      <nuxt-link to="/technician/management">
+      <nuxt-link to="/technician/management/user-service-providers">
         <ProjectsIcon class="fill-current mr-5" /> Management
       </nuxt-link>
     </div>
+
+
 
     <div class="menu-item">
       <nuxt-link to="/technician/electronics">
@@ -40,6 +42,12 @@
     <div class="menu-item">
       <nuxt-link to="/technician/messages">
         <font-awesome-icon class="mr-5 h-6 inline text-xl" :icon="['fas', 'comments']"/> Messages
+      </nuxt-link>
+    </div>
+
+    <div class="menu-item">
+      <nuxt-link to="/technician/tasklist">
+        <TaskIcon class="fill-current mr-5" /> Task List
       </nuxt-link>
     </div>
 
