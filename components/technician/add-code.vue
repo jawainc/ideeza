@@ -84,9 +84,7 @@
 </template>
 
 <script>
-    import 'codemirror/theme/base16-dark.css'
     import  DropDownField from '~/components/form/dropdown-field.vue'
-    import Languages from '~/static/data/languages.js'
     export default {
         name: "add-code",
         components: {
@@ -96,19 +94,22 @@
             return {
               editor: null,
               contents: null,
-              selectedLanguage: 'javascript'
+              selectedLanguage: 'c_cpp'
             }
         },
       mounted() {
         this.editor = ace.edit("editor", {
-          theme: "ace/theme/terminal",
           selectionStyle: "text"
         });
         this.languageChange();
+        this.setEditorTheme();
       },
         methods: {
           languageChange() {
-              this.editor.session.setMode(`ace/mode/${this.selectedLanguage}`);
+              this.editor.session.setMode('ace/mode/'+this.selectedLanguage);
+          },
+          setEditorTheme() {
+            this.editor.setTheme('ace/theme/monokai');
           },
           getEditorContents(){
             return this.editor.getValue();

@@ -21,9 +21,6 @@
             <font-awesome-icon class="mr-5 h-6 inline text-xl" :icon="['fas', 'sitemap']"/> Categories
           </nuxt-link>
 
-          <nuxt-link class="header-menu" to="/technician/management/questions">
-            <font-awesome-icon class="mr-5 h-6 inline text-xl" :icon="['fas', 'clipboard-list']"/> Question Algorithm
-          </nuxt-link>
 
           <nuxt-link class="header-menu" to="/technician/management/projects">
             <font-awesome-icon class="mr-5 h-6 inline text-xl" :icon="['fas', 'clipboard-list']"/> Projects

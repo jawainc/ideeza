@@ -113,7 +113,8 @@
     </div>
 
     <!--Add new project-->
-    <new-project @onClose="addNewProject=false" v-if="addNewProject" />
+    <new-project @newTask="addNewTaskForProject" @onClose="addNewProject=false" v-if="addNewProject" />
+    <new-task @onClose="addNewTask=false" v-if="addNewTask" />
   </div>
 </template>
 
@@ -121,18 +122,26 @@
   import DropDownField from "~/components/form/dropdown-field.vue"
   import SearchField from "~/components/form/search.vue"
   import AddNewProject from "~/components/technician/management/new-project.vue"
+  import AddNewTask from "~/components/technician/management/new-task.vue"
     export default {
         name: "projects",
       components: {
           'drop-down': DropDownField,
         'search-field': SearchField,
-        'new-project': AddNewProject
+        'new-project': AddNewProject,
+        'new-task': AddNewTask
       },
       data: function () {
         return {
           addNewProject: false,
+          addNewTask: false,
           dataDropDown : ['All', 'Active', 'Completed', 'Priority', 'Over Due'],
           sortDropDown : ['None', 'Due Date First', 'Starting Day First', 'Chronologycal', 'Alphabetical']
+        }
+      },
+      methods: {
+        addNewTaskForProject() {
+          this.addNewTask = true;
         }
       }
     }

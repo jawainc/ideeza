@@ -13,10 +13,8 @@
       </nuxt-link>
     </div>
 
-
-
     <div class="menu-item">
-      <nuxt-link to="/technician/electronics">
+      <nuxt-link to="/technician/electronics/add-part">
         <font-awesome-icon class="mr-5 h-6 inline text-xl" :icon="['fas', 'bolt']"/> Electronics
       </nuxt-link>
     </div>

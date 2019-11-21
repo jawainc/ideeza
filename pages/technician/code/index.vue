@@ -32,15 +32,13 @@
 
     import LeftMenu from '~/components/technician/common-left-side-menu.vue'
     import AddCode from '~/components/technician/add-code.vue'
-    import AddCode2 from '~/components/technician/add-code-2.vue'
 
     export default {
         layout: 'technician',
         name: "code-index",
         components: {
             LeftMenu,
-            AddCode,
-          AddCode2
+            AddCode
         },
 
         computed: {
