@@ -15,273 +15,201 @@
 
 
 
-      <div class="w-full overflow-x-hidden">
-        <div class="task-wrapper flex flex-wrap">
+      <div class="w-full">
+        <smooth-scrollbar classes="my-scrollbar" :options="{alwaysShowTracks: true}">
+          <div class="task-wrapper flex mb-10">
 
-          <!--Task Col-->
-          <div class="task-col">
-            <div class="mx-auto  lg:mx-0 lg:mr-8 pb-5 shadow-md bg-white">
-              <div class="py-6 px-5 text-xl font-semibold text-gray-800 border-b border-solid border-gray-400">
-                02nd Thursday
-              </div>
+            <!--Task Col-->
+            <div class="task-col">
+              <div class="mx-auto  lg:mx-0 lg:mr-8 pb-5 shadow-md bg-white">
+                <div class="py-6 px-5 text-xl font-semibold text-gray-800 border-b border-solid border-gray-400">
+                  02nd Thursday
+                </div>
 
-              <!--Task content-->
-              <div class="my-16 mx-3 p-3">
-                <div class="task-time">09:00 AM - 10:30 AM</div>
-                <div class="task-name">Finish electronics part</div>
+                <!--Task content-->
+                <div class="my-16 mx-3 p-3">
+                  <div class="task-time">09:00 AM - 10:30 AM</div>
+                  <div class="task-name">Finish electronics part</div>
 
-                <div class="mt-8 flex justify-between items-center">
-                  <div class="flex items-center">
-                    <img class="h-10 w-10 mr-2 rounded-full"
-                         src="https://randomuser.me/api/portraits/women/17.jpg">
-                    <img class="h-10 w-10 mr-2 rounded-full"
-                         src="https://randomuser.me/api/portraits/men/16.jpg">
-                    <div @click="addNewMember = !addNewMember" class="add-member h-10 w-10 mr-2 bg-gray-300 rounded-full relative " :class="{'active': addNewMember}" >
-                      <font-awesome-icon class="absolute-center-h-v mr-1 h-4 " :icon="['fas', 'plus']"/>
-                      <InvitePopup v-if="addNewMember" />
+                  <div class="mt-8 flex justify-between items-center">
+                    <div class="flex items-center">
+                      <img class="h-10 w-10 mr-2 rounded-full"
+                           src="https://randomuser.me/api/portraits/women/17.jpg">
+                      <img class="h-10 w-10 mr-2 rounded-full"
+                           src="https://randomuser.me/api/portraits/men/16.jpg">
+                      <div @click="addNewMember = !addNewMember" class="add-member h-10 w-10 mr-2 bg-gray-300 rounded-full relative " :class="{'active': addNewMember}" >
+                        <font-awesome-icon class="absolute-center-h-v mr-1 h-4 " :icon="['fas', 'plus']"/>
+                        <InvitePopup v-if="addNewMember" />
+                      </div>
+                    </div>
+
+                    <!--Attachments-->
+                    <div class="flex items-center">
+                      <div class="mr-2">
+                        <font-awesome-icon class="h-4 text-ideeza  cursor-pointer " :icon="['far', 'comment']"/> <span class="attachment-no">5</span>
+                      </div>
+                      <div class="mr-2">
+                        <font-awesome-icon class="h-4 text-ideeza  cursor-pointer " :icon="['fas', 'paperclip']"/> <span class="attachment-no">2</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="my-16 mx-3 p-3 important">
+                  <div class="task-time flex justify-between">
+                    <div>09:00 AM - 10:30 AM</div>
+                    <div class="opacity-25 text-sm">
+                      *IMPORTANT
+                    </div>
+                  </div>
+                  <div class="task-name">Cover sketching</div>
+
+                  <div class="mt-8 flex justify-between items-center">
+                    <div class="flex items-center">
+
+                      <img class="h-10 w-10 mr-2 rounded-full"
+                           src="https://randomuser.me/api/portraits/men/13.jpg">
+                      <div class="add-member">
+                        <font-awesome-icon class="absolute-center-h-v mr-1 h-4 text-gray-600 hover:text-gray-800  cursor-pointer " :icon="['fas', 'plus']"/>
+                      </div>
+                    </div>
+
+                    <!--Attachments-->
+                    <div class="flex items-center">
+                      <div class="mr-2">
+                        <font-awesome-icon class="h-4 text-ideeza  cursor-pointer " :icon="['far', 'comment']"/> <span class="attachment-no">5</span>
+                      </div>
+                      <div class="mr-2">
+                        <font-awesome-icon class="h-4 text-ideeza  cursor-pointer " :icon="['fas', 'paperclip']"/> <span class="attachment-no">2</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="my-16 mx-3 p-3">
+                  <div class="task-time">09:00 AM - 10:30 AM</div>
+                  <div class="task-name">Small tasks to finish</div>
+
+                  <div class="mt-5">
+                    <div>
+                      <CheckBox :checked="false" value="" >Do a research on design</CheckBox>
+                    </div>
+                    <div>
+                      <CheckBox :checked="false" value="" >Check if all deliveries are made</CheckBox>
                     </div>
                   </div>
 
-                  <!--Attachments-->
-                  <div class="flex items-center">
-                    <div class="mr-2">
-                      <font-awesome-icon class="h-4 text-ideeza  cursor-pointer " :icon="['far', 'comment']"/> <span class="attachment-no">5</span>
+                  <div class="mt-8 flex justify-between items-center">
+                    <div class="flex items-center">
+                      <img class="h-10 w-10 mr-2 rounded-full"
+                           src="https://randomuser.me/api/portraits/women/17.jpg">
+                      <img class="h-10 w-10 mr-2 rounded-full"
+                           src="https://randomuser.me/api/portraits/men/16.jpg">
+                      <div class="add-member h-10 w-10 mr-2 bg-gray-300 rounded-full relative">
+                        <font-awesome-icon class="absolute-center-h-v mr-1 h-4 text-gray-600 hover:text-gray-800  cursor-pointer " :icon="['fas', 'plus']"/>
+                      </div>
                     </div>
-                    <div class="mr-2">
-                      <font-awesome-icon class="h-4 text-ideeza  cursor-pointer " :icon="['fas', 'paperclip']"/> <span class="attachment-no">2</span>
+
+                    <!--Attachments-->
+                    <div class="flex items-center">
+                      <div class="mr-2">
+                        <font-awesome-icon class="h-4 text-ideeza  cursor-pointer " :icon="['far', 'comment']"/> <span class="attachment-no">5</span>
+                      </div>
+                      <div class="mr-2">
+                        <font-awesome-icon class="h-4 text-ideeza  cursor-pointer " :icon="['fas', 'paperclip']"/> <span class="attachment-no">2</span>
+                      </div>
                     </div>
                   </div>
+                </div>
+
+
+                <div class="mb-5 text-center">
+                  <button @click="showAddTask = true" class="btn pill-button px-5">+Add new task</button>
                 </div>
               </div>
 
 
-              <div class="my-16 mx-3 p-3 important">
-                <div class="task-time flex justify-between">
-                  <div>09:00 AM - 10:30 AM</div>
-                  <div class="opacity-25 text-sm">
-                    *IMPORTANT
-                  </div>
-                </div>
-                <div class="task-name">Cover sketching</div>
-
-                <div class="mt-8 flex justify-between items-center">
-                  <div class="flex items-center">
-
-                    <img class="h-10 w-10 mr-2 rounded-full"
-                         src="https://randomuser.me/api/portraits/men/13.jpg">
-                    <div class="add-member">
-                      <font-awesome-icon class="absolute-center-h-v mr-1 h-4 text-gray-600 hover:text-gray-800  cursor-pointer " :icon="['fas', 'plus']"/>
-                    </div>
-                  </div>
-
-                  <!--Attachments-->
-                  <div class="flex items-center">
-                    <div class="mr-2">
-                      <font-awesome-icon class="h-4 text-ideeza  cursor-pointer " :icon="['far', 'comment']"/> <span class="attachment-no">5</span>
-                    </div>
-                    <div class="mr-2">
-                      <font-awesome-icon class="h-4 text-ideeza  cursor-pointer " :icon="['fas', 'paperclip']"/> <span class="attachment-no">2</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="my-16 mx-3 p-3">
-                <div class="task-time">09:00 AM - 10:30 AM</div>
-                <div class="task-name">Small tasks to finish</div>
-
-                <div class="mt-5">
-                  <div>
-                    <CheckBox :checked="false" value="" >Do a research on design</CheckBox>
-                  </div>
-                  <div>
-                    <CheckBox :checked="false" value="" >Check if all deliveries are made</CheckBox>
-                  </div>
-                </div>
-
-                <div class="mt-8 flex justify-between items-center">
-                  <div class="flex items-center">
-                    <img class="h-10 w-10 mr-2 rounded-full"
-                         src="https://randomuser.me/api/portraits/women/17.jpg">
-                    <img class="h-10 w-10 mr-2 rounded-full"
-                         src="https://randomuser.me/api/portraits/men/16.jpg">
-                    <div class="add-member h-10 w-10 mr-2 bg-gray-300 rounded-full relative">
-                      <font-awesome-icon class="absolute-center-h-v mr-1 h-4 text-gray-600 hover:text-gray-800  cursor-pointer " :icon="['fas', 'plus']"/>
-                    </div>
-                  </div>
-
-                  <!--Attachments-->
-                  <div class="flex items-center">
-                    <div class="mr-2">
-                      <font-awesome-icon class="h-4 text-ideeza  cursor-pointer " :icon="['far', 'comment']"/> <span class="attachment-no">5</span>
-                    </div>
-                    <div class="mr-2">
-                      <font-awesome-icon class="h-4 text-ideeza  cursor-pointer " :icon="['fas', 'paperclip']"/> <span class="attachment-no">2</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="mb-5 text-center">
-                <button class="btn pill-button px-5">+Add new task</button>
-              </div>
             </div>
 
+            <!--Task Col-->
+            <div v-for="task in tasks" :key="task.id" class="task-col ">
+              <div class="mr-8 pb-5 shadow-md bg-white">
+                <div class="py-6 px-5 text-xl font-semibold text-gray-800 border-b border-solid border-gray-400">
+                  03rd Friday
+                </div>
 
-          </div>
+                <!--Task content-->
+                <div class="my-16 mx-3 p-3">
+                  <div class="task-time">09:00 AM - 10:30 AM</div>
+                  <div class="task-name">Finish electronics part</div>
 
-          <!--Task Col-->
-          <div class="hidden lg:block task-col ">
-            <div class="mr-8 pb-5 shadow-md bg-white">
-              <div class="py-6 px-5 text-xl font-semibold text-gray-800 border-b border-solid border-gray-400">
-                03rd Friday
-              </div>
+                  <div class="mt-8 flex justify-between items-center">
+                    <div class="flex items-center">
+                      <img class="h-10 w-10 mr-2 rounded-full"
+                           src="https://randomuser.me/api/portraits/women/17.jpg">
+                      <img class="h-10 w-10 mr-2 rounded-full"
+                           src="https://randomuser.me/api/portraits/men/16.jpg">
+                      <div class="add-member h-10 w-10 mr-2 bg-gray-300 rounded-full relative " >
+                        <font-awesome-icon class="absolute-center-h-v mr-1 h-4" :icon="['fas', 'plus']"/>
+                      </div>
+                    </div>
 
-              <!--Task content-->
-              <div class="my-16 mx-3 p-3">
-                <div class="task-time">09:00 AM - 10:30 AM</div>
-                <div class="task-name">Finish electronics part</div>
-
-                <div class="mt-8 flex justify-between items-center">
-                  <div class="flex items-center">
-                    <img class="h-10 w-10 mr-2 rounded-full"
-                         src="https://randomuser.me/api/portraits/women/17.jpg">
-                    <img class="h-10 w-10 mr-2 rounded-full"
-                         src="https://randomuser.me/api/portraits/men/16.jpg">
-                    <div class="add-member h-10 w-10 mr-2 bg-gray-300 rounded-full relative " >
-                      <font-awesome-icon class="absolute-center-h-v mr-1 h-4" :icon="['fas', 'plus']"/>
+                    <!--Attachments-->
+                    <div class="flex items-center">
+                      <div class="mr-2">
+                        <font-awesome-icon class="h-4 text-ideeza  cursor-pointer " :icon="['far', 'comment']"/> <span class="attachment-no">5</span>
+                      </div>
+                      <div class="mr-2">
+                        <font-awesome-icon class="h-4 text-ideeza  cursor-pointer " :icon="['fas', 'paperclip']"/> <span class="attachment-no">2</span>
+                      </div>
                     </div>
                   </div>
+                </div>
 
-                  <!--Attachments-->
-                  <div class="flex items-center">
-                    <div class="mr-2">
-                      <font-awesome-icon class="h-4 text-ideeza  cursor-pointer " :icon="['far', 'comment']"/> <span class="attachment-no">5</span>
+
+                <div class="my-16 mx-3 p-3">
+                  <div class="task-time">09:00 AM - 10:30 AM</div>
+                  <div class="task-name">Need to finish this and that,
+                    lorem ipsum dolores sit man...</div>
+
+
+                  <div class="mt-8 flex justify-between items-center">
+                    <div class="flex items-center">
+                      <img class="h-10 w-10 mr-2 rounded-full"
+                           src="https://randomuser.me/api/portraits/women/17.jpg">
+                      <img class="h-10 w-10 mr-2 rounded-full"
+                           src="https://randomuser.me/api/portraits/men/16.jpg">
+                      <div class="add-member h-10 w-10 mr-2 bg-gray-300 rounded-full relative">
+                        <font-awesome-icon class="absolute-center-h-v mr-1 h-4 text-gray-600 hover:text-gray-800  cursor-pointer " :icon="['fas', 'plus']"/>
+                      </div>
                     </div>
-                    <div class="mr-2">
-                      <font-awesome-icon class="h-4 text-ideeza  cursor-pointer " :icon="['fas', 'paperclip']"/> <span class="attachment-no">2</span>
+
+                    <!--Attachments-->
+                    <div class="flex items-center">
+                      <div class="mr-2">
+                        <font-awesome-icon class="h-4 text-ideeza  cursor-pointer " :icon="['far', 'comment']"/> <span class="attachment-no">5</span>
+                      </div>
+                      <div class="mr-2">
+                        <font-awesome-icon class="h-4 text-ideeza  cursor-pointer " :icon="['fas', 'paperclip']"/> <span class="attachment-no">2</span>
+                      </div>
                     </div>
                   </div>
+                </div>
+
+
+                <div class="mb-5 text-center">
+                  <button @click="showAddTask = true" class="btn pill-button px-5">+Add new task</button>
                 </div>
               </div>
 
 
-              <div class="my-16 mx-3 p-3">
-                <div class="task-time">09:00 AM - 10:30 AM</div>
-                <div class="task-name">Need to finish this and that,
-                  lorem ipsum dolores sit man...</div>
-
-
-                <div class="mt-8 flex justify-between items-center">
-                  <div class="flex items-center">
-                    <img class="h-10 w-10 mr-2 rounded-full"
-                         src="https://randomuser.me/api/portraits/women/17.jpg">
-                    <img class="h-10 w-10 mr-2 rounded-full"
-                         src="https://randomuser.me/api/portraits/men/16.jpg">
-                    <div class="add-member h-10 w-10 mr-2 bg-gray-300 rounded-full relative">
-                      <font-awesome-icon class="absolute-center-h-v mr-1 h-4 text-gray-600 hover:text-gray-800  cursor-pointer " :icon="['fas', 'plus']"/>
-                    </div>
-                  </div>
-
-                  <!--Attachments-->
-                  <div class="flex items-center">
-                    <div class="mr-2">
-                      <font-awesome-icon class="h-4 text-ideeza  cursor-pointer " :icon="['far', 'comment']"/> <span class="attachment-no">5</span>
-                    </div>
-                    <div class="mr-2">
-                      <font-awesome-icon class="h-4 text-ideeza  cursor-pointer " :icon="['fas', 'paperclip']"/> <span class="attachment-no">2</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="mb-5 text-center">
-                <button class="btn pill-button px-5">+Add new task</button>
-              </div>
             </div>
 
-
           </div>
-
-          <!--Task Col-->
-          <div class="hidden lg:block task-col ">
-            <div class="mr-8 pb-5 shadow-md bg-white">
-              <div class="py-6 px-5 text-xl font-semibold text-gray-800 border-b border-solid border-gray-400">
-                03rd Friday
-              </div>
-
-              <!--Task content-->
-              <div class="my-16 mx-3 p-3">
-                <div class="task-time">09:00 AM - 10:30 AM</div>
-                <div class="task-name">Finish electronics part</div>
-
-                <div class="mt-8 flex justify-between items-center">
-                  <div class="flex items-center">
-                    <img class="h-10 w-10 mr-2 rounded-full"
-                         src="https://randomuser.me/api/portraits/women/17.jpg">
-                    <img class="h-10 w-10 mr-2 rounded-full"
-                         src="https://randomuser.me/api/portraits/men/16.jpg">
-                    <div class="add-member h-10 w-10 mr-2 bg-gray-300 rounded-full relative">
-                      <font-awesome-icon class="absolute-center-h-v mr-1 h-4 text-gray-600 hover:text-gray-800  cursor-pointer " :icon="['fas', 'plus']"/>
-                    </div>
-                  </div>
-
-                  <!--Attachments-->
-                  <div class="flex items-center">
-                    <div class="mr-2">
-                      <font-awesome-icon class="h-4 text-ideeza  cursor-pointer " :icon="['far', 'comment']"/> <span class="attachment-no">5</span>
-                    </div>
-                    <div class="mr-2">
-                      <font-awesome-icon class="h-4 text-ideeza  cursor-pointer " :icon="['fas', 'paperclip']"/> <span class="attachment-no">2</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        </smooth-scrollbar>
 
 
-              <div class="my-16 mx-3 p-3">
-                <div class="task-time">09:00 AM - 10:30 AM</div>
-                <div class="task-name">Need to finish this and that,
-                  lorem ipsum dolores sit man...</div>
-
-
-                <div class="mt-8 flex justify-between items-center">
-                  <div class="flex items-center">
-                    <img class="h-10 w-10 mr-2 rounded-full"
-                         src="https://randomuser.me/api/portraits/women/17.jpg">
-                    <img class="h-10 w-10 mr-2 rounded-full"
-                         src="https://randomuser.me/api/portraits/men/16.jpg">
-                    <div class="add-member h-10 w-10 mr-2 bg-gray-300 rounded-full relative">
-                      <font-awesome-icon class="absolute-center-h-v mr-1 h-4 text-gray-600 hover:text-gray-800  cursor-pointer " :icon="['fas', 'plus']"/>
-                    </div>
-                  </div>
-
-                  <!--Attachments-->
-                  <div class="flex items-center">
-                    <div class="mr-2">
-                      <font-awesome-icon class="h-4 text-ideeza  cursor-pointer " :icon="['far', 'comment']"/> <span class="attachment-no">5</span>
-                    </div>
-                    <div class="mr-2">
-                      <font-awesome-icon class="h-4 text-ideeza  cursor-pointer " :icon="['fas', 'paperclip']"/> <span class="attachment-no">2</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="mb-5 text-center">
-                <button class="btn pill-button px-5">+Add new task</button>
-              </div>
-            </div>
-
-
-          </div>
-
-
-
-        </div>
       </div>
 
     </div>
@@ -292,7 +220,7 @@
         Calendar
       </div>
       <!--Calendar-->
-      <vc-calendar class="mx-auto mt-5" color="pink" is-expanded :theme="theme" />
+      <vc-calendar @dayclick="addTasks" class="mx-auto mt-5" color="pink" is-expanded :theme="theme" />
 
       <div class="mt-5 py-5 px-5 border-t border-solid border-gray-300">
         <div class="text-xl text-gray-500 font-semibold">
@@ -333,12 +261,13 @@
       </div>
 
     </div>
-
+    <AddTask @onClose="closeAddTask" v-if="showAddTask" />
   </div>
 
 
 </template>
 <script>
+  import AddTask from '~/components/user/tasklist/add-task'
   import LeftMenu from '~/components/user/common-left-side-menu.vue'
   import CheckBox from '~/components/form/checkbox.vue'
   import InvitePopup from '~/components/user/add-member/add-member-popup.vue'
@@ -348,10 +277,12 @@
     components: {
       LeftMenu,
       CheckBox,
-      InvitePopup
+      InvitePopup,
+      AddTask
     },
     data: function () {
       return {
+        showAddTask: false,
         addNewMember: false,
         theme: {
           container: {
@@ -361,7 +292,9 @@
             light:
               'ideeza-arrow',
           },
-        }
+        },
+        tasks: [],
+        id: 0
       }
     },
     computed: {
@@ -372,12 +305,25 @@
     mounted() {
 
     },
-    methods: {}
+    methods: {
+      closeAddTask(){
+        this.showAddTask = false;
+      },
+      addTasks(){
+        this.tasks.push({
+          id: this.id
+        })
+        this.id ++;
+      }
+    }
   }
 </script>
 
 <style scoped>
-
+  .my-scrollbar{
+    width: 100%;
+    min-width: 300px;
+  }
   .task-col{
     @apply mt-5;
     width: 100%;

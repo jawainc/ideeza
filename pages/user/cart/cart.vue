@@ -8,17 +8,20 @@
     <table>
       <thead>
       <tr class="text-gray-800 h16">
-        <th class="text-left ">Products</th>
-        <th class="text-left lg:text-center">Color</th>
-        <th class="text-left lg:text-center">Price</th>
-        <th class="text-left lg:text-center">Quantity</th>
-        <th class="text-left lg:text-center">Cost</th>
         <th></th>
+        <th class="text-left line">Products</th>
+        <th class="text-left lg:text-center line">Color</th>
+        <th class="text-left lg:text-center line">Price</th>
+        <th class="text-left lg:text-center line">Quantity</th>
+        <th class="text-left lg:text-center line">Cost</th>
+        <th class="line"></th>
       </tr>
       </thead>
       <tbody>
         <tr class="" @click="details1 = !details1">
+          <td class="checkbox"></td>
         <td class="product" >
+
           <div class="lg:flex">
             <div class="mr-2">
               <img src="~/static/images/Layercar.png">
@@ -46,6 +49,7 @@
         </td>
       </tr>
         <tr v-if="details1" class="" >
+          <td class="checkbox"></td>
           <td class="product" >
 
           </td>
@@ -70,6 +74,7 @@
           </td>
         </tr>
         <tr class="">
+          <td class="checkbox"></td>
           <td class="product" >
             <div class="lg:flex">
               <div class="mr-2">
@@ -152,6 +157,44 @@
       Total: <span class="ml-3">$25000</span>
     </div>
 
+    <v-client-table ref="products_table" :data="tableData" :columns="columns" :options="options">
+      <div class="flex items-center" slot="detail" slot-scope="props" >
+        <div class="mr-2">
+          <img src="~/static/images/Layercar.png">
+        </div>
+        <div class="my-auto">
+                <span class="block font-semibold">
+                  {{props.row.product.name}}
+                </span>
+          <span class="block text-sm text-gray-500 ">
+                  {{props.row.product.detail}}
+                </span>
+        </div>
+      </div>
+      <span class="font-semibold" slot="price" slot-scope="props">{{props.row.price | currency}}</span>
+      <span class="font-semibold" slot="cost" slot-scope="props">{{props.row.cost | currency}}</span>
+      <div class="flex justify-end" slot="actions" slot-scope="props">
+        <font-awesome-icon class="mr-2 h-4 cursor-pointer text-ideeza" :icon="['fas', 'trash']"/>
+        <font-awesome-icon @click="$refs.products_table.toggleChildRow()" class="mr-2 h-4 cursor-pointer text-ideeza" :icon="['fas', 'pen']"/>
+        <font-awesome-icon class="mr-2 h-4 cursor-pointer text-ideeza" :icon="['fas', 'plus']"/>
+      </div>
+
+      <template slot="child_row" scope="props">
+        <div class="text-center font-semibold mb-3 flex justify-end p-5" >
+          <h1 class="text-center font-semibold mb-3 w-32">Category</h1>
+          <h1 class="text-center font-semibold mb-3 w-32">Manufacturers</h1>
+          <h1 class="text-center font-semibold mb-3 w-32">Price</h1>
+        </div>
+        <div v-for="manufacturer in props.row.manufacturers" class="flex justify-end p-5">
+          <div class="w-32 text-center">{{manufacturer.category}}</div>
+          <div class="w-32 text-center">{{manufacturer.name}}</div>
+          <div class="w-32 text-center">{{manufacturer.price | currency}}</div>
+
+        </div>
+      </template>
+
+    </v-client-table>
+
     <Manufacturer @close="openManufacturer = false" v-if="openManufacturer" class="z-50" />
   </div>
 </template>
@@ -166,7 +209,77 @@
       data: function() {
         return {
           details1: false,
-          openManufacturer: false
+          openManufacturer: false,
+          columns: ['id', 'detail', 'color', 'price', 'quantity', 'cost', 'actions'],
+          tableData: [
+            {
+              id: 1,
+              product: {
+                image: 'Layercar.png',
+                name: 'Lamborghini',
+                detail: 'Electronics + Cover'
+              },
+              color: 'Red',
+              price: 20000,
+              quantity: 1,
+              cost: 10000,
+              manufacturers: [
+                {
+                  id: 1,
+                  category: 'Electronics',
+                  name: 'PCB, Way',
+                  price: 2000
+                },
+                {
+                  id: 2,
+                  category: 'Code',
+                  name: 'The Other Way',
+                  price: 4000
+                }
+              ]
+
+            },
+            {
+              id: 2,
+              product: {
+                image: 'Layercar.png',
+                name: 'Lamborghini',
+                detail: 'Electronics + Cover'
+              },
+              color: 'Red',
+              price: 20000,
+              quantity: 1,
+              cost: 10000,
+              manufacturers: [
+                {
+                  id: 1,
+                  category: 'Electronics',
+                  name: 'PCB, Way',
+                  price: 2000
+                },
+                {
+                  id: 2,
+                  category: 'Code',
+                  name: 'The Other Way',
+                  price: 4000
+                }
+              ]
+            }
+          ],
+          options: {
+            headings: {
+              id: '',
+              detail: 'Products',
+              color: 'Color',
+              price: 'Price',
+              quantity: 'Quantity',
+              cost: 'Cost',
+              actions: ''
+            },
+            sortable: [],
+            filterable: false,
+            childRowTogglerFirst: false
+          }
         }
       },
       mounted() {
@@ -183,76 +296,38 @@
 <style scoped>
 
   /*Table*/
-  @screen lg{
-    table{
+
+  /deep/ table{
       @apply mb-5 w-full table-auto border-collapse text-gray-600 mx-auto;
 
     }
-    thead tr{
-      @apply border-b-2 border-solid border-ideeza;
+  /deep/ thead tr th{
+      @apply text-ideeza-black border-b-2 border-solid border-ideeza;
     }
-    td.product{
-      width: 350px;
+  /deep/ thead tr th:first-child{
+      @apply border-b-0;
     }
-    td.product img{
+  /deep/ tr td:first-child{
+      width: 50px;
+      text-align: left;
+    }
+  /deep/ tr td:nth-child(2){
+      width: 450px;
+    text-align: left;
+    }
+  /deep/ tr td img{
       width: 180px;
     }
-    tbody td{
+  /deep/ tbody td{
+      @apply py-3 my-3 text-center;
+    }
+  /deep/ tbody td:last-child{
+    @apply text-right;
+  }
+  /deep/ tbody tr:last-child td{
       @apply py-3 my-3;
     }
-    tbody tr:last-child td{
-      @apply py-3 my-3;
-    }
-  }
 
-  @media
-  only screen and (max-width: 760px),
-  (min-device-width: 768px) and (max-device-width: 1024px)  {
+  /*    */
 
-    /* Force table to not be like tables anymore */
-    table, thead, tbody, th, td, tr {
-      display: block;
-    }
-
-    /* Hide table headers (but not display: none;, for accessibility) */
-    thead tr {
-      position: absolute;
-      top: -9999px;
-      left: -9999px;
-    }
-
-    tr { border: 1px solid #ccc; margin-bottom: 10px; }
-
-    td {
-      /* Behave  like a "row" */
-      border: none;
-      border-bottom: 1px solid #eee;
-      position: relative;
-      padding-left: 50%;
-    }
-
-    td:before {
-      /* Now like a table header */
-      position: absolute;
-      /* Top/left values mimic padding */
-      top: 6px;
-      left: 6px;
-      width: 45%;
-      padding-right: 10px;
-      white-space: nowrap;
-      font-weight: 600;
-    }
-
-    /*
-      Label the data
-      */
-    td:nth-of-type(1):before { content: "Products"; }
-    td:nth-of-type(2):before { content: "Color"; }
-    td:nth-of-type(2):before { content: "Price"; }
-    td:nth-of-type(4):before { content: "Quantity"; }
-    td:nth-of-type(4):before { content: "Cost"; }
-    td:nth-of-type(6):before { content: "Action"; }
-
-
-  }
 </style>
