@@ -12,7 +12,7 @@
 </template>
 
 <script>
-  import _ from 'lodash'
+
     export default {
         name: "category-field",
         props: ['placeholder', 'data', 'selected', 'styleHeight'],

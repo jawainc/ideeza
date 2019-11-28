@@ -24,10 +24,13 @@
         </div>
         <span class="font-semibold" slot="price" slot-scope="props">{{props.row.price | currency}}</span>
         <span class="font-semibold" slot="cost" slot-scope="props">{{props.row.cost | currency}}</span>
-        <div class="flex justify-end" slot="actions" slot-scope="props">
+        <div class="flex items-center justify-end" slot="actions" slot-scope="props">
           <font-awesome-icon class="mr-2 h-4 cursor-pointer text-ideeza" :icon="['fas', 'trash']"/>
           <font-awesome-icon @click="toggleChildRow('products_table_'+project.id, props.row.id)" class="mr-2 h-4 cursor-pointer text-ideeza" :icon="['fas', 'pen']"/>
-          <font-awesome-icon class="mr-2 h-4 cursor-pointer text-ideeza" :icon="['fas', 'plus']"/>
+          <nuxt-link to="/user/add-service">
+            <font-awesome-icon class="mr-2 h-4 cursor-pointer text-ideeza" :icon="['fas', 'plus']"/>
+          </nuxt-link>
+
         </div>
 
         <div slot="child_row" slot-scope="props" class="pb-10 pr-32">
