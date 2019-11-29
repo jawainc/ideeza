@@ -41,7 +41,15 @@
           </div>
           <div v-for="manufacturer in props.row.manufacturers" class="flex justify-end px-5">
             <div class="w-32 text-center">{{manufacturer.category}}</div>
-            <div class="w-48 text-center">{{manufacturer.name}}</div>
+            <div class="w-48 text-center ">
+              <nuxt-link to="/user/add-manufacturer">
+                <span>
+                {{manufacturer.name}}
+              </span>
+                <font-awesome-icon class="ml-2 h-4 cursor-pointer text-ideeza" :icon="['fas', 'pen']"/>
+              </nuxt-link>
+
+            </div>
             <div class="w-32 text-center">{{manufacturer.price | currency}}</div>
 
           </div>
