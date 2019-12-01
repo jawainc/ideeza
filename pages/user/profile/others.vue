@@ -6,7 +6,7 @@
     <div class="flex-grow lg:p-10">
       <div class="lg:flex p-2 lg:p-5 xl:p-20 bg-white shadow-md">
         <div class="left-panel">
-          <img class="w-full" src="https://i.pravatar.cc/400?img=13" alt="">
+          <img class="w-full" src="https://i.pravatar.cc/400?img=68" alt="">
 
           <div class="mt-10 mb-5 semi-border  relative">
             <span class="font-semibold text-gray-500 pr-3 bg-white">SOCIAL MEDIA</span>
@@ -68,22 +68,23 @@
             </div>
           </div>
           <div class="lg:mt-10 lg:flex items-center">
-            <button class="btn btn-normal px-10 py-3">Contact</button>
-            <div class="relative ml-5" v-click-outside="onClickOutside">
+            <button class="btn btn-normal px-10 py-3" :class="{'btn-green': isConnected}" @click="isConnected = !isConnected">{{connected}}</button>
+            <button class="btn btn-normal mx-5 px-10 py-3">Send Message</button>
+            <div class="relative " v-click-outside="onClickOutside">
               <button class="btn btn-normal px-10 py-3" :class="{'bg-ideeza-gray-100': focusMore}" @click="focusMore = !focusMore">More</button>
-              <div class="z-50 absolute bg-white shadow-md py-2 pl-1 pr-10" v-show="focusMore" >
-                <div class="px-2 py-3 text-ideeza-black hover:text-ideeza block cursor-pointer">Edit Profile</div>
-                <nuxt-link to="/user/settings" class="pl-1 py-2 text-ideeza-black hover:text-ideeza block cursor-pointer pr-10">Settings</nuxt-link>
+              <div class="z-50 absolute bg-white shadow-md py-2 pl-1 text-xs more-popup" v-show="focusMore" >
+                <div class="px-2 py-3 text-ideeza-black hover:text-ideeza block cursor-pointer">Follow</div>
+                <div class="px-2 py-3 text-ideeza-black hover:text-ideeza block cursor-pointer">Report User</div>
+                <div class="px-2 py-3 text-ideeza-black hover:text-ideeza block cursor-pointer">Block User</div>
+                <div class="px-2 py-3 text-ideeza-black hover:text-ideeza block cursor-pointer">Send Agency Invitation</div>
+
               </div>
             </div>
           </div>
 
           <!--Tabs-->
           <div class="tabs-container z-10 relative flex lg:mt-20">
-            <div @click="tabItem='about'" class="tab-item" :class="{active: tabItem === 'about', 'border-bot': tabItem !== 'about'}"><font-awesome-icon class="mr-3 h-5" :icon="['fas', 'user']"/> About</div>
-            <div @click="tabItem='projects'" class="tab-item" :class="{active: tabItem === 'projects', 'border-bot': tabItem !== 'projects'}"><font-awesome-icon class="mr-3 h-5" :icon="['fas', 'lightbulb']"/> Projects</div>
             <div @click="tabItem='timeline'" class="tab-item" :class="{active: tabItem === 'timeline', 'border-bot': tabItem !== 'timeline'}"><font-awesome-icon class="mr-3 h-5" :icon="['fas', 'eye']"/> Shared Projects</div>
-
             <div @click="tabItem='reviews'" class="tab-item" :class="{active: tabItem === 'reviews', 'border-bot': tabItem !== 'reviews'}"><font-awesome-icon class="mr-3 h-5" :icon="['fas', 'star']"/> Reviews</div>
           </div>
           <!--Time line-->
@@ -277,43 +278,6 @@
             </div>
           </div>
 
-          <!--About-->
-          <div class="mt-5" v-if="tabItem === 'about'">
-            <h1 class="text-gray-500 font-semibold txt-xl my-10">CONTACT INFORMATION</h1>
-            <div class="flex mb-5 font-semibold text-lg">
-              <div class="heading-contact">Phone:</div>
-              <div class="text-ideeza-dark">+1 22 333 4567</div>
-            </div>
-            <div class="flex mb-5 font-semibold text-lg">
-              <div class="heading-contact">Address:</div>
-              <div class="">111 E 11th Street<br>New York, NY</div>
-            </div>
-            <div class="flex mb-5 font-semibold text-lg">
-              <div class="heading-contact">Email:</div>
-              <div class="text-ideeza-dark">john@doe.com</div>
-            </div>
-            <div class="flex mb-5 font-semibold text-lg">
-              <div class="heading-contact">Website:</div>
-              <div class="text-ideeza-dark">www.johndoe.com</div>
-            </div>
-
-            <h1 class="text-gray-500 font-semibold txt-xl my-10">BASIC INFORMATION</h1>
-            <div class="flex mb-5 font-semibold text-lg">
-              <div class="heading-contact">Birthday:</div>
-              <div class="">June 21, 1998</div>
-            </div>
-            <div class="flex mb-5 font-semibold text-lg">
-              <div class="heading-contact">Gender:</div>
-              <div class="">Male</div>
-            </div>
-          </div>
-
-          <!--Projects-->
-          <div class="mt-5 flex flex-wrap" v-if="tabItem === 'projects'">
-            <img class="project-image" src="~/static/images/dron-8.png" alt="">
-            <img class="project-image" src="~/static/images/dron-8.png" alt="">
-            <img class="project-image" src="~/static/images/dron-8.png" alt="">
-          </div>
 
           <!--Reviews-->
           <div class="mt-5" v-if="tabItem === 'reviews'">
@@ -392,12 +356,16 @@
       data: function() {
         return {
           tabItem: 'timeline',
-          focusMore: false
+          focusMore: false,
+          isConnected: false
         }
       },
       computed: {
         leftMenu () {
           return this.$store.state.usermenu.openLeftMenu;
+        },
+        connected () {
+          return this.isConnected ? 'Connected' : 'Connect';
         }
       },
       methods: {
@@ -460,6 +428,9 @@
   }
   .feed-comment-avatar{
     width: 48px;
+  }
+  .more-popup{
+    width: 170px;
   }
   @screen lg{
     .left-panel{

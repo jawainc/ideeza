@@ -163,6 +163,9 @@ select{
 .btn-text-bold{
   @apply font-semibold;
 }
+.btn-green{
+  @apply bg-ideeza-green text-white;
+}
 .btn--rounded{
   @apply rounded-lg;
 }

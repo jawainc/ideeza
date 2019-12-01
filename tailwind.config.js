@@ -18,7 +18,8 @@ module.exports = {
         'ideeza': '#ff00c7',
         'ideeza-100': '#F2EFF1',
         'ideeza-dark': '#431184',
-        'ideeza-gold': '#ED8A19'
+        'ideeza-gold': '#ED8A19',
+        'ideeza-green': '#4FB800'
       }
     }
   },

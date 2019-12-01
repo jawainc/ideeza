@@ -28,7 +28,7 @@
                 </div>
               </nuxt-link>
 
-              <div  class="absolute p-5 rounded-lg border-light-gray border-solid border shadow-md z-50 bg-white pop-over">
+              <div  class="absolute p-5 rounded-lg border-light-gray border-solid border shadow-md z-50 pop-over">
                 <div class="flex justify-between items-center">
                   <div class="flex items-center">
                     <h1 class="font-semibold text-lg">Project name</h1>
@@ -285,6 +285,16 @@
       max-width: 1000px;
     }
 
+    .double:before{
+      @apply border border-solid border-ideeza;
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      width: 101%;
+      height: 102%;
+    }
+
     .project-item-container--image{
       @apply object-center object-cover;
       height: 370px;
@@ -294,6 +304,7 @@
       width: 500px;
       top: 70%;
       left: 20%;
+      background: #f2eef6;
     }
     .project-item-container:hover .pop-over{
       @apply block;
