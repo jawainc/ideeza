@@ -32,7 +32,7 @@
             </div>
 
             <div class="flex justify-between">
-              <div class="p-6">
+              <div class="status-button p-6">
                 <div class="flex items-center">
                   <font-awesome-icon class="mr-6 h-10 text-2xl  text-ideeza" :icon="['fas', 'layer-group']"/>
                   <span class="text-6xl text-ideeza-black mb-5 leading-none">812</span>
@@ -41,7 +41,7 @@
                   <span class="text-ideeza-blue-gray text-lg block ">Projects</span>
                 </div>
               </div>
-              <div class="p-6">
+              <div class="status-button p-6">
                 <div class="flex items-center">
                   <img class="mr-6" src="~/static/icons/users.svg" alt="">
                   <span class="text-6xl text-ideeza-black mb-5 leading-none">388</span>
@@ -50,7 +50,7 @@
                   <span class="text-ideeza-blue-gray text-lg block ">Contacts</span>
                 </div>
               </div>
-              <div class="p-6">
+              <div class="status-button p-6">
                 <div class="flex items-center">
                   <img class="mr-6" src="~/static/icons/bullseye.svg" alt="">
                   <span class="text-6xl text-ideeza-black mb-5 leading-none">4.9</span>
@@ -84,117 +84,224 @@
 
         <div class="flex">
           <div class="w-2/3">
-            <h1 class="font-semibold lg:text-3xl my-5">World's lat innovation</h1>
-            <div class="flex">
-              <div class="mr-2">
-                <div class="blog-image-container mb-8">
-                  <img src="~/static/images/dashboard-blog-image.png" class="object-center object-contain" alt="">
-                </div>
-                <h3 class="font-semibold tex-2xl  mb-2">Google was working with us</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget interdum urna, ac ornare risus. Vivamus
-                </p>
-                <div class="flex justify-between items-center mt-5">
-                  <small>21 October, 2019</small>
-                  <button class="btn btn--ideeza px-4 py-2">Read more</button>
-                </div>
-              </div>
-              <div class="mr-2">
-                <div class="flex justify-between items-center mb-5">
-                  <small>21 October, 2019</small>
-                  <button class="btn btn--ideeza px-4 py-2">Read more</button>
+            <h1 class="font-semibold lg:text-3xl my-5">World's last innovation</h1>
+            <div class="scroll-area">
+              <smooth-scrollbar :options="{alwaysShowTracks: true}">
+                <div class="flex flex-wrap">
+                  <div class="blog-container mr-2">
+                    <div class="blog-image-container mb-8">
+                      <img src="~/static/images/dashboard-blog-image.png" class="object-center object-contain" alt="">
+                    </div>
+                    <h3 class="font-semibold tex-2xl  mb-2">Google was working with us</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget interdum urna, ac ornare risus. Vivamus
+                    </p>
+                    <div class="flex justify-between items-center mt-5">
+                      <small>21 October, 2019</small>
+                      <button class="btn btn--ideeza px-4 py-2">Read more</button>
+                    </div>
+                  </div>
+                  <div class="blog-container mr-2">
+                    <div class="flex justify-between items-center mb-5">
+                      <small>21 October, 2019</small>
+                      <button class="btn btn--ideeza px-4 py-2">Read more</button>
+                    </div>
+
+                    <h3 class="font-semibold tex-2xl  mb-2">Google was working with us</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget interdum urna, ac ornare risus. Vivamus
+                    </p>
+                    <div class="blog-image-container mt-8">
+                      <img src="~/static/images/dashboard-blog-image.png" class="object-center object-contain" alt="">
+                    </div>
+
+                  </div>
+                  <div class="blog-container mr-2">
+                    <div class="blog-image-container mb-8">
+                      <img src="~/static/images/dashboard-blog-image.png" class="object-center object-contain" alt="">
+                    </div>
+                    <h3 class="font-semibold tex-2xl  mb-2">Google was working with us</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget interdum urna, ac ornare risus. Vivamus
+                    </p>
+                    <div class="flex justify-between items-center mt-5">
+                      <small>21 October, 2019</small>
+                      <button class="btn btn--ideeza px-4 py-2">Read more</button>
+                    </div>
+                  </div>
+                  <div class="blog-container mr-2">
+                    <div class="blog-image-container mb-8">
+                      <img src="~/static/images/dashboard-blog-image.png" class="object-center object-contain" alt="">
+                    </div>
+                    <h3 class="font-semibold tex-2xl  mb-2">Google was working with us</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget interdum urna, ac ornare risus. Vivamus
+                    </p>
+                    <div class="flex justify-between items-center mt-5">
+                      <small>21 October, 2019</small>
+                      <button class="btn btn--ideeza px-4 py-2">Read more</button>
+                    </div>
+                  </div>
+                  <div class="blog-container mr-2">
+                    <div class="blog-image-container mb-8">
+                      <img src="~/static/images/dashboard-blog-image.png" class="object-center object-contain" alt="">
+                    </div>
+                    <h3 class="font-semibold tex-2xl  mb-2">Google was working with us</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget interdum urna, ac ornare risus. Vivamus
+                    </p>
+                    <div class="flex justify-between items-center mt-5">
+                      <small>21 October, 2019</small>
+                      <button class="btn btn--ideeza px-4 py-2">Read more</button>
+                    </div>
+                  </div>
+                  <div class="blog-container mr-2">
+                    <div class="blog-image-container mb-8">
+                      <img src="~/static/images/dashboard-blog-image.png" class="object-center object-contain" alt="">
+                    </div>
+                    <h3 class="font-semibold tex-2xl  mb-2">Google was working with us</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget interdum urna, ac ornare risus. Vivamus
+                    </p>
+                    <div class="flex justify-between items-center mt-5">
+                      <small>21 October, 2019</small>
+                      <button class="btn btn--ideeza px-4 py-2">Read more</button>
+                    </div>
+                  </div>
                 </div>
 
-                <h3 class="font-semibold tex-2xl  mb-2">Google was working with us</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget interdum urna, ac ornare risus. Vivamus
-                </p>
-                <div class="blog-image-container mt-8">
-                  <img src="~/static/images/dashboard-blog-image.png" class="object-center object-contain" alt="">
-                </div>
-
-              </div>
-              <div class="mr-2">
-                <div class="blog-image-container mb-8">
-                  <img src="~/static/images/dashboard-blog-image.png" class="object-center object-contain" alt="">
-                </div>
-                <h3 class="font-semibold tex-2xl  mb-2">Google was working with us</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget interdum urna, ac ornare risus. Vivamus
-                </p>
-                <div class="flex justify-between items-center mt-5">
-                  <small>21 October, 2019</small>
-                  <button class="btn btn--ideeza px-4 py-2">Read more</button>
-                </div>
-              </div>
+              </smooth-scrollbar>
             </div>
 
           </div>
           <div class="w-1/3">
             <h1 class="font-semibold lg:text-3xl my-5">Top projects</h1>
-            <div class="flex flex-wrap">
-              <div class="w-1/2 p-2">
-                <div class="p-2 border border-solid border-light-gray">
-                  <div class="w-full projects-image">
-                    <img src="~/static/images/dashboard-audi.png" class="object-contain object-center w-full" alt="">
-                    <div class="my-1 flex justify-between items-center">
-                      <div class="flex items-center">
-                        <font-awesome-icon class="mr-1 h-4 text-ideeza-gold" :icon="['fas', 'star']"/>
-                        <small class="text-xs">4.5</small>
-                      </div>
+            <div class="scroll-area">
+              <smooth-scrollbar :options="{alwaysShowTracks: true}">
+                <div class="flex flex-wrap">
+                  <div class="w-1/2 p-2">
+                    <div class="p-2 border border-solid border-light-gray">
+                      <div class="w-full projects-image">
+                        <img src="~/static/images/dashboard-audi.png" class="object-contain object-center w-full" alt="">
+                        <div class="my-1 flex justify-between items-center">
+                          <div class="flex items-center">
+                            <font-awesome-icon class="mr-1 h-4 text-ideeza-gold" :icon="['fas', 'star']"/>
+                            <small class="text-xs">4.5</small>
+                          </div>
 
-                      <span class="text-xs">34 likes</span>
+                          <span class="text-xs">34 likes</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-1/2 p-2">
+                    <div class="p-2 border border-solid border-light-gray">
+                      <div class="w-full projects-image">
+                        <img src="~/static/images/dashboard-audi.png" class="object-contain object-center w-full" alt="">
+                        <div class="my-1 flex justify-between items-center">
+                          <div class="flex items-center">
+                            <font-awesome-icon class="mr-1 h-4 text-ideeza-gold" :icon="['fas', 'star']"/>
+                            <small class="text-xs">4.5</small>
+                          </div>
+
+                          <span class="text-xs">34 likes</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-1/2 p-2">
+                    <div class="p-2 border border-solid border-light-gray">
+                      <div class="w-full projects-image">
+                        <img src="~/static/images/dashboard-audi.png" class="object-contain object-center w-full" alt="">
+                        <div class="my-1 flex justify-between items-center">
+                          <div class="flex items-center">
+                            <font-awesome-icon class="mr-1 h-4 text-ideeza-gold" :icon="['fas', 'star']"/>
+                            <small class="text-xs">4.5</small>
+                          </div>
+
+                          <span class="text-xs">34 likes</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-1/2 p-2">
+                    <div class="p-2 border border-solid border-light-gray">
+                      <div class="w-full projects-image">
+                        <img src="~/static/images/dashboard-audi.png" class="object-contain object-center w-full" alt="">
+                        <div class="my-1 flex justify-between items-center">
+                          <div class="flex items-center">
+                            <font-awesome-icon class="mr-1 h-4 text-ideeza-gold" :icon="['fas', 'star']"/>
+                            <small class="text-xs">4.5</small>
+                          </div>
+
+                          <span class="text-xs">34 likes</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-1/2 p-2">
+                    <div class="p-2 border border-solid border-light-gray">
+                      <div class="w-full projects-image">
+                        <img src="~/static/images/dashboard-audi.png" class="object-contain object-center w-full" alt="">
+                        <div class="my-1 flex justify-between items-center">
+                          <div class="flex items-center">
+                            <font-awesome-icon class="mr-1 h-4 text-ideeza-gold" :icon="['fas', 'star']"/>
+                            <small class="text-xs">4.5</small>
+                          </div>
+
+                          <span class="text-xs">34 likes</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-1/2 p-2">
+                    <div class="p-2 border border-solid border-light-gray">
+                      <div class="w-full projects-image">
+                        <img src="~/static/images/dashboard-audi.png" class="object-contain object-center w-full" alt="">
+                        <div class="my-1 flex justify-between items-center">
+                          <div class="flex items-center">
+                            <font-awesome-icon class="mr-1 h-4 text-ideeza-gold" :icon="['fas', 'star']"/>
+                            <small class="text-xs">4.5</small>
+                          </div>
+
+                          <span class="text-xs">34 likes</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-1/2 p-2">
+                    <div class="p-2 border border-solid border-light-gray">
+                      <div class="w-full projects-image">
+                        <img src="~/static/images/dashboard-audi.png" class="object-contain object-center w-full" alt="">
+                        <div class="my-1 flex justify-between items-center">
+                          <div class="flex items-center">
+                            <font-awesome-icon class="mr-1 h-4 text-ideeza-gold" :icon="['fas', 'star']"/>
+                            <small class="text-xs">4.5</small>
+                          </div>
+
+                          <span class="text-xs">34 likes</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-1/2 p-2">
+                    <div class="p-2 border border-solid border-light-gray">
+                      <div class="w-full projects-image">
+                        <img src="~/static/images/dashboard-audi.png" class="object-contain object-center w-full" alt="">
+                        <div class="my-1 flex justify-between items-center">
+                          <div class="flex items-center">
+                            <font-awesome-icon class="mr-1 h-4 text-ideeza-gold" :icon="['fas', 'star']"/>
+                            <small class="text-xs">4.5</small>
+                          </div>
+
+                          <span class="text-xs">34 likes</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="w-1/2 p-2">
-                <div class="p-2 border border-solid border-light-gray">
-                  <div class="w-full projects-image">
-                    <img src="~/static/images/dashboard-audi.png" class="object-contain object-center w-full" alt="">
-                    <div class="my-1 flex justify-between items-center">
-                      <div class="flex items-center">
-                        <font-awesome-icon class="mr-1 h-4 text-ideeza-gold" :icon="['fas', 'star']"/>
-                        <small class="text-xs">4.5</small>
-                      </div>
-
-                      <span class="text-xs">34 likes</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="w-1/2 p-2">
-                <div class="p-2 border border-solid border-light-gray">
-                  <div class="w-full projects-image">
-                    <img src="~/static/images/dashboard-audi.png" class="object-contain object-center w-full" alt="">
-                    <div class="my-1 flex justify-between items-center">
-                      <div class="flex items-center">
-                        <font-awesome-icon class="mr-1 h-4 text-ideeza-gold" :icon="['fas', 'star']"/>
-                        <small class="text-xs">4.5</small>
-                      </div>
-
-                      <span class="text-xs">34 likes</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="w-1/2 p-2">
-                <div class="p-2 border border-solid border-light-gray">
-                  <div class="w-full projects-image">
-                    <img src="~/static/images/dashboard-audi.png" class="object-contain object-center w-full" alt="">
-                    <div class="my-1 flex justify-between items-center">
-                      <div class="flex items-center">
-                        <font-awesome-icon class="mr-1 h-4 text-ideeza-gold" :icon="['fas', 'star']"/>
-                        <small class="text-xs">4.5</small>
-                      </div>
-
-                      <span class="text-xs">34 likes</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </smooth-scrollbar>
             </div>
-
 
 
           </div>
@@ -243,5 +350,19 @@
   }
   .projects-image{
     /*height: 170px;*/
+  }
+  .scroll-area{
+    height: 430px;
+  }
+  .blog-container{
+    @apply mr-2 mt-2;
+    width: 320px;
+    height: 420px;
+  }
+  .status-button{
+    @apply p-3 m-3 border border-solid border-ideeza cursor-pointer rounded;
+  }
+  /deep/ .scrollbar-thumb{
+    @apply bg-ideeza opacity-75;
   }
 </style>

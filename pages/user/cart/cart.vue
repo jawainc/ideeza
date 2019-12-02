@@ -2,7 +2,9 @@
   <div class="lg:px-20">
     <h1 class="text-lg font-semibold heading-border border-b pb-3">Projects</h1>
 
-    <div v-for="project in projects" :key="project.id">
+    <div class="scroll-area">
+      <smooth-scrollbar :options="{alwaysShowTracks: true}">
+        <div v-for="project in projects" :key="project.id">
       <div class="p-3 my-3 gradient-bg text-white flex justify-between gradient-bg items-center">
         <div class="text-sm mb-1 lg:mb-0 lg:text-xl">{{project.name}}</div>
         <font-awesome-icon class="mr-1 h-4 cursor-pointer text-white" :icon="['fas', 'trash']"/>
@@ -60,25 +62,23 @@
         Total: <span class="ml-3">{{project.total | currency}}</span>
       </div>
     </div>
+      </smooth-scrollbar>
+    </div>
 
 
-    <Manufacturer @close="openManufacturer = false" v-if="openManufacturer" class="z-50" />
   </div>
 </template>
 
 <script>
-    import Manufacturer from '~/components/user/cart/manufacturer.vue'
     import CheckBox from '~/components/form/checkbox-dark.vue'
     export default {
       name: "cart",
       components: {
-        Manufacturer,
         CheckBox
       },
       data: function() {
         return {
           details1: false,
-          openManufacturer: false,
           columns: ['id', 'detail', 'color', 'price', 'quantity', 'cost', 'actions'],
           projects: [
             {
@@ -207,6 +207,16 @@
 </script>
 
 <style scoped>
+
+  /deep/ .smooth-scrollbar{
+    padding-right: 20px;
+    margin-top: 15px;
+  }
+
+  .scroll-area{
+    width: 100%;
+    height: 600px;
+  }
 
   /*Table*/
 

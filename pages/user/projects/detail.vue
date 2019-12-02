@@ -19,7 +19,8 @@
               <span class="ml-5 panel-menu text-center"><font-awesome-icon class="mr-1 panel-menu-icon"
                                                                            :icon="['fas', 'cube']"/>Cover</span>
               <nuxt-link to="/user/pro" class="ml-5 panel-menu text-center"><font-awesome-icon class="mr-1 panel-menu-icon"
-                                                                           :icon="['fas', 'wrench']"/>Customize</nuxt-link>
+                                                                           :icon="['fas', 'wrench']"/>General</nuxt-link>
+              <nuxt-link to="/user/pro" class="ml-5 panel-menu text-center"><CustomizeIcon class="fill-current mr-1 w-4" />Customize</nuxt-link>
             </div>
           </div>
 
@@ -60,7 +61,7 @@
 
               <div class="flex py-5 px-5 border-b border-solid border-gray-300 justify-between items-center w-full">
                 <span class="text-lg font-semibold text-ideeza">Description</span>
-                <button @click="tab=1" class="btn btn-small px-3 text-ideeza"><font-awesome-icon class="mr-2 h-3 align-baseline"  :icon="['fa', 'pen']"/> Edit</button>
+                <button @click="tab=1" class="btn btn-small px-3 text-ideeza"><font-awesome-icon class="mr-2 h-3 align-baseline inline"  :icon="['fa', 'pen']"/> Edit</button>
               </div>
 
 
@@ -70,7 +71,7 @@
             </div>
             <div class="py-10 px-5 text-gray-600 w-full" v-if="tab===1">
               <textarea name="" id="" cols="30" rows="10" class="w-full border-light-gray border border-solid p-3" v-model="description"></textarea>
-              <div class="mt-5">
+              <div class="mt-5 flex justify-end">
                 <button class="btn pill-button--ideeza px-5 py-1" @click="tab=0">Save</button>
               </div>
             </div>
@@ -93,6 +94,7 @@
   import RightSideBar from '~/components/user/projects/right-bar.vue'
   import ShareInternal from '~/components/share/share-internal.vue'
   import ShareExternal from '~/components/share/share-external.vue'
+  import CustomizeIcon from '~/components/partials/icons/customize-icon.vue'
     export default {
       layout: 'user',
       name: "building-index",
@@ -100,7 +102,8 @@
         LeftMenu,
         RightSideBar,
         ShareInternal,
-        ShareExternal
+        ShareExternal,
+        CustomizeIcon
       },
       data: function () {
         return {

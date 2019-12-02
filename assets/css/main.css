@@ -144,7 +144,6 @@ select{
   height: 30px;
 }
 .btn svg{
-  vertical-align: text-bottom;
   display: inline-block;
 }
 .btn-small--white{

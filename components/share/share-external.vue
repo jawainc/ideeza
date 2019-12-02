@@ -6,6 +6,8 @@
         <font-awesome-icon class="share-icon" @click="title='linkedin'" :class="{'active': title==='linkedin'}" :icon="['fab', 'linkedin']"/>
         <font-awesome-icon class="share-icon" @click="title='instagram'" :class="{'active': title==='instagram'}" :icon="['fab', 'instagram']"/>
         <font-awesome-icon class="share-icon" @click="title='twitter'" :class="{'active': title==='twitter'}" :icon="['fab', 'twitter-square']"/>
+        <font-awesome-icon class="share-icon" @click="title='whatsapp'" :class="{'active': title==='whatsapp'}" :icon="['fab', 'whatsapp-square']"/>
+        <TiktokIcon class="share-icon fill-current w-5" @click="title='tiktok'" :class="{'active': title==='tiktok'}"  />
       </div>
       <h1 class="font-semibold">Share on {{title}}</h1>
       <textarea name="" id="" cols="30" rows="10" class="w-full border border-solid border-light-gray my-5"></textarea>
@@ -19,13 +21,19 @@
 </template>
 
 <script>
+  import TikTokIcon from '~/components/partials/icons/tiktok-icon.vue'
+  import TiktokIcon from "../partials/icons/tiktok-icon";
     export default {
         name: "share-internal",
-        data: function () {
+      components: {TiktokIcon},
+      data: function () {
           return {
             title: 'facebook'
           }
-        }
+        },
+      comments: [
+        TikTokIcon
+      ]
     }
 </script>
 

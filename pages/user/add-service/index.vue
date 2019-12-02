@@ -102,8 +102,7 @@
                       </div>
 
                       <div class="flex items-center">
-                        <div class="py-1 px-2 border border-solid border-light-gray mr-3">6 Days</div>
-                        <div class="py-1 px-2 border border-solid border-light-gray mr-3">$220</div>
+                        <button class="btn btn-normal px-3 py-2">Request Quote</button>
                       </div>
 
                     </div>

@@ -21,17 +21,17 @@
               <div class="stepper-text stepper-text--cart" :class="{'active': cartStep === 2 || cartStep === 6}">Cart</div>
             </div>
 
-            <!--5-->
+            <!--4-->
             <div class="stepper-icon-wrapper relative" :class="{'active': cartStep === 3 || cartStep === 6}">
               <font-awesome-icon class="w-8 h-8 text-xl absolute-center-h-v" :icon="['fas', 'truck-loading']"/>
               <div class="stepper-text stepper-text--delivery" :class="{'active': cartStep === 3 || cartStep === 6}">Delivery</div>
             </div>
-            <!--6-->
+            <!--5-->
             <div class="stepper-icon-wrapper relative" :class="{'active': cartStep === 4 || cartStep === 6}">
               <font-awesome-icon class="w-8 h-8 text-xl absolute-center-h-v" :icon="['fas', 'money-check-alt']"/>
               <div class="stepper-text stepper-text--payment" :class="{'active': cartStep === 4 || cartStep === 6}">Payment</div>
             </div>
-            <!--7-->
+            <!--6-->
             <div class="stepper-icon-wrapper relative" :class="{'active': cartStep === 5 || cartStep === 6}">
               <font-awesome-icon class="w-8 h-8 text-xl absolute-center-h-v" :icon="['fas', 'clipboard-check']"/>
               <div class="stepper-text stepper-text--confirmation" :class="{'active': cartStep === 5 || cartStep === 6}">Confirmation</div>
@@ -61,6 +61,7 @@
           return this.$store.state.cartstepper.cartStep * 20;
         },
         cartStep () {
+          console.log(this.$store.state.cartstepper.cartStep)
           return this.$store.state.cartstepper.cartStep;
         }
       }
