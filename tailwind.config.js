@@ -16,6 +16,7 @@ module.exports = {
         'ideeza-black': '#101010',
         'ideeza-blue-gray': '#8399A4',
         'ideeza': '#ff00c7',
+        'ideeza-red': '#FF2174',
         'ideeza-100': '#F2EFF1',
         'ideeza-dark': '#431184',
         'ideeza-gold': '#ED8A19',

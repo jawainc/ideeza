@@ -61,6 +61,12 @@ h1,h2,h3,h4,h5,h6{
   top: 50%;
   transform: translate(0, -50%);
 }
+.absolute-center-h{
+  position: absolute;
+  margin: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
 .fixed-center-h-v{
   position: fixed;
   margin: 0;
@@ -158,6 +164,9 @@ select{
 .btn-normal{
   @apply font-thin rounded-none leading-none;
   min-width: fit-content;
+}
+.btn-hollow--ideeza{
+  @apply border-ideeza bg-white text-ideeza;
 }
 .btn-text-bold{
   @apply font-semibold;

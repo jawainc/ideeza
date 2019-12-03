@@ -72,7 +72,7 @@
             <div class="py-10 px-5 text-gray-600 w-full" v-if="tab===1">
               <textarea name="" id="" cols="30" rows="10" class="w-full border-light-gray border border-solid p-3" v-model="description"></textarea>
               <div class="mt-5 flex justify-end">
-                <button class="btn pill-button--ideeza px-5 py-1" @click="tab=0">Save</button>
+                <button class="btn pill-button--ideeza px-5 py-1" @click="saveDescription">Save</button>
               </div>
             </div>
           </div>
@@ -132,6 +132,13 @@
       methods: {
         onClickOutside (event, el) {
           this.focus = false;
+        },
+        saveDescription(){
+          if(this.description === '') {
+            this.$notify({group: 'error', type: "error", text: 'Please fill in the description'})
+          } else {
+            this.tab = 0;
+          }
         },
         closeShareInternal() {
           this.internalShare = false;

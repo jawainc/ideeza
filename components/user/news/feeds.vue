@@ -4,10 +4,16 @@
         <img class="feed-owner-avatar rounded-full mr-5" src="https://randomuser.me/api/portraits/women/14.jpg" alt="">
         <div class="flex-grow bg-white p-5 shadow">
           <div class="text-gray-600 font-semibold text-lg mb-5 flex justify-between mx-5">
-            <div>Sarah Doe <span class="font-normal">add a new project</span> <span class="text-gray-800">Retro Headphones</span> • <span class="font-normal text-xs">3 weeks ago</span></div>
-            <div>
+            <div>Sarah Doe <span class="font-normal"> Loves a project</span></div>
+            <div class="relative">
               <font-awesome-icon class="mr-1 h-6 text-lg inline-block text-gray-500 hover:text-gray-600 cursor-pointer" :icon="['fas', 'ellipsis-h']"/>
             </div>
+          </div>
+          <div class="my-5">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+              Ipsum has been the industry's standard dummy text ever since
+            </p>
           </div>
           <div class="bg-gray-200">
             <img class="w-full object-fit object-center" src="~/static/images/car-big.png" alt="">
@@ -42,7 +48,16 @@
             <div>
               <font-awesome-icon class="mr-1 h-6 text-lg inline-block text-gray-500 hover:text-gray-600 cursor-pointer" :icon="['fas', 'ellipsis-h']"/>
             </div>
+
           </div>
+
+          <div class="px-5 my-5">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+              Ipsum has been the industry's standard dummy text ever since
+            </p>
+          </div>
+
           <div class="bg-gray-200 mx-5">
             <img class="w-full object-fit object-center" src="~/static/images/headphone-big.png" alt="">
           </div>

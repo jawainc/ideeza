@@ -54,7 +54,9 @@
                 New york, NY
               </div>
             </div>
-
+            <nuxt-link to="/user/settings">
+              <font-awesome-icon class="mr-1 h-4 text-sm inline-block cursor-pointer" :icon="['fas', 'cog']"/>
+            </nuxt-link>
           </div>
           <div class="lg:mt-10">
             <span class="text-gray-500 block">RATINGS</span>
@@ -67,16 +69,7 @@
               <img class="rating-star" src="~/static/images/star-gray.png" alt="">
             </div>
           </div>
-          <div class="lg:mt-10 lg:flex items-center">
-            <button class="btn btn-normal px-10 py-3">Contact</button>
-            <div class="relative ml-5" v-click-outside="onClickOutside">
-              <button class="btn btn-normal px-10 py-3" :class="{'bg-ideeza-gray-100': focusMore}" @click="focusMore = !focusMore">More</button>
-              <div class="z-50 absolute bg-white shadow-md py-2 pl-1 pr-10" v-show="focusMore" >
-                <div class="px-2 py-3 text-ideeza-black hover:text-ideeza block cursor-pointer">Edit Profile</div>
-                <nuxt-link to="/user/settings" class="pl-1 py-2 text-ideeza-black hover:text-ideeza block cursor-pointer pr-10">Settings</nuxt-link>
-              </div>
-            </div>
-          </div>
+
 
           <!--Tabs-->
           <div class="tabs-container z-10 relative flex lg:mt-20">
@@ -152,7 +145,7 @@
                   </div>
 
                   <div class="flex items-center font-semibold">
-                    <div class="mr-6 text-ideeza">26 comments</div>
+                    <div @click="showComments = !showComments" class="mr-6 text-ideeza cursor-pointer">26 comments</div>
                     <div class="mr-6">3 share</div>
                   </div>
 
@@ -164,7 +157,7 @@
                 </div>
 
                 <!--Comments-->
-                <div class="border-b border-solid border-gray-300 py-5 px-5">
+                <div v-if="showComments" class="border-b border-solid border-gray-300 py-5 px-5">
                   <div class="flex w-full mb-10">
                     <div class="w-16">
                       <img class="feed-comment-avatar rounded-full" src="https://randomuser.me/api/portraits/men/15.jpg" alt="">
@@ -279,7 +272,11 @@
 
           <!--About-->
           <div class="mt-5" v-if="tabItem === 'about'">
-            <h1 class="text-gray-500 font-semibold txt-xl my-10">CONTACT INFORMATION</h1>
+            <div class="flex justify-between items-center">
+              <h1 class="text-gray-500 font-semibold txt-xl my-10">CONTACT INFORMATION</h1>
+              <button class="btn btn-normal btn-small px-2">Edit profile</button>
+            </div>
+
             <div class="flex mb-5 font-semibold text-lg">
               <div class="heading-contact">Phone:</div>
               <div class="text-ideeza-dark">+1 22 333 4567</div>
@@ -392,7 +389,8 @@
       data: function() {
         return {
           tabItem: 'timeline',
-          focusMore: false
+          focusMore: false,
+          showComments: false
         }
       },
       computed: {

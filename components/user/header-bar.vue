@@ -15,19 +15,14 @@
         </div>
 
       </div>
-      <!--Search Form-->
-      <div class="search-form-container w-full ml-20 mr-20 hidden lg:flex">
-        <div class="bg-white h-full relative pl-5 pr-5"><img class="search-logo" src="~/static/images/search-purple.png"></div>
-        <input placeholder="search" class="search-input">
-        <div class="bg-white h-full relative pl-5 pr-5"><img class="search-logo" src="https://png.icons8.com/android/17/cccccc/microphone.png"></div>
-      </div>
+
       <!--Menu-->
       <div class="flex items-center justify-end">
         <nuxt-link to="/user/cart/overview" class="cart-button bg-transparent rounded-full h-10 w-10 flex items-center justify-center mr-5 hidden lg:flex">
           <img class="cart-icon" src="https://img.icons8.com/ios-glyphs/50/ffffff/shopping-cart.png">
         </nuxt-link>
         <div class="flex items-center relative mr-5 " v-click-outside="onClickOutside">
-          <font-awesome-icon class="text-white text-2xl h-10 cursor-pointer" @click="showInfoAlert = !showInfoAlert" :icon="['far', 'bell']"/>
+          <font-awesome-icon class="text-white text-2xl h-6 cursor-pointer" @click="showInfoAlert = !showInfoAlert" :icon="['far', 'bell']"/>
           <font-awesome-icon class="text-ideeza h-2 absolute bell-info" :icon="['fas', 'circle']"/>
           <div class="info-alert text-xs" v-show="showInfoAlert">
             <div class="text-ideeza-black px-2 py-4 font-semibold">New</div>
@@ -49,12 +44,30 @@
           </div>
         </div>
 
+        <div class="flex items-center relative mr-5 " v-click-outside="onClickOutsideHelp">
+          <font-awesome-icon class="text-white text-2xl h-6 cursor-pointer" @click="showHelpAlert = !showHelpAlert" :icon="['fas', 'question']"/>
+          <div class="help-alert text-xs" v-show="showHelpAlert">
+
+            <nuxt-link to="/user/help" class="text-gray-500 hover:text-gray-800 font-semibold px-3 py-2 w-full block" >
+              <div class="px-2 w-full flex items-center">
+                <font-awesome-icon class="mr-3 h-5 align-text-middle" :icon="['fas', 'info-circle']"/> Help
+              </div>
+            </nuxt-link>
+
+            <nuxt-link to="/user/support" class="text-gray-500 hover:text-gray-800 font-semibold px-3 py-2 w-full block" >
+              <div class="px-2 w-full flex items-center">
+                <font-awesome-icon class="mr-3 h-5 align-text-middle" :icon="['fas', 'user-tie']"/> Support
+              </div>
+            </nuxt-link>
+
+          </div>
+        </div>
+
         <div class="flex justify-center items-center content-center w-m-c">
           <nuxt-link to="/user/profile" class="flex items-center">
             <img class="h-10 w-10 rounded-full mr-2 " src="https://randomuser.me/api/portraits/men/17.jpg">
             <span class="text-white inline-block">John Doe</span>
           </nuxt-link>
-
 
         </div>
       </div>
@@ -67,7 +80,8 @@
         name: "header-bar",
       data: function () {
         return {
-          showInfoAlert: false
+          showInfoAlert: false,
+          showHelpAlert: false,
         }
       },
       computed: {
@@ -81,6 +95,9 @@
         }),
         onClickOutside(){
           this.showInfoAlert = false;
+        },
+        onClickOutsideHelp(){
+          this.showHelpAlert = false;
         }
       }
     }
@@ -91,7 +108,7 @@
     width: max-content;
   }
   .bell-info{
-    top: 10px;
+    top: 3px;
     right: -3px;
     z-index: 50;
   }
@@ -99,7 +116,13 @@
     @apply shadow-lg absolute z-50 bg-white;
     width: 285px;
     left: -132px;
-    top: 45px;
+    top: 35px;
+  }
+  .help-alert{
+    @apply shadow-lg absolute z-50 bg-white;
+    width: 150px;
+    left: -60px;
+    top: 35px;
   }
   .info-alert:before{
     border: solid;

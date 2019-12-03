@@ -18,10 +18,7 @@
               <span class="font-semibold block text-3xl mb-3 w-full text-center">Now is your time to change the world.</span>
               <span class="font-semibold block text-3xl mb-10 w-full text-center">Dream, invent, create.</span>
 
-              <nuxt-link to="/">
-                <img src="~/static/images/float-ideeza.png" alt="">
-              </nuxt-link>
-
+              <img @click="showMyIdeeza=true" class="cursor-pointer" src="~/static/images/float-ideeza.png" alt="">
             </div>
 
           </div>
@@ -311,6 +308,9 @@
 
     </div>
 
+
+    <!--MyIdeeza Popup-->
+    <MyIdeeza v-click-outside="onClickOutside" v-if="showMyIdeeza" />
   </div>
 
 
@@ -318,15 +318,19 @@
 
 <script>
   import LeftMenu from '~/components/user/common-left-side-menu.vue'
+  import MyIdeeza from '~/components/user/my-ideeza/new-ideeza.vue'
 
   export default {
     layout: 'user',
     name: "dashboard-index",
     components: {
-      LeftMenu
+      LeftMenu,
+      MyIdeeza
     },
     data: function () {
-      return {}
+      return {
+        showMyIdeeza: false
+      }
     },
     computed: {
       leftMenu() {
@@ -336,11 +340,16 @@
     mounted() {
 
     },
-    methods: {}
+    methods: {
+      onClickOutside() {
+        this.showMyIdeeza = false;
+      }
+    }
   }
 </script>
 
 <style scoped>
+
   .welcome-container{
     height: 455px;
   }

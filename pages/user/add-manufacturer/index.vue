@@ -39,7 +39,7 @@
               </div>
             </div>
             <div>
-              <button class="btn btn-normal btn--ideeza px-8 py-2">Optimize</button>
+              <button @click="showOptimize = true" class="btn btn-normal btn--ideeza px-8 py-2">Optimize</button>
               <button @click="$router.back()" class="ml-5 btn btn-normal btn--ideeza-dark px-8 py-2">< Go Back</button>
             </div>
 
@@ -106,7 +106,7 @@
                     </div>
 
                     <div class="flex items-center">
-                      <button class="btn btn-normal px-3 py-2">Request Quote</button>
+                      <button @click="requestQuote = !requestQuote" class="btn btn-normal px-3 py-2" :class="{'btn-green': quoteSend}">Request Quote</button>
                     </div>
 
                   </div>
@@ -187,24 +187,89 @@
 
     </div>
 
+    <!--Request popup-->
+    <div v-if="requestQuote" class="quote-popup absolute-center-h-v " v-click-outside="onClickOutside">
+      <h1 class="text-xl font-semibold">Requesting quote</h1>
+      <p class="mt-2">
+        After requesting the quote there will 5 more<br/> free quotes left
+      </p>
+      <div class="flex justify-end mt-3"><button @click="sendQuote" class="btn btn-normal btn--ideeza px-4 py-2">Send</button></div>
+    </div>
+
+    <!--Optimize popup-->
+    <div v-if="showOptimize" class="quote-popup absolute-center-h-v " v-click-outside="onClickOutsideOptimize">
+      <h1 class="text-xl font-semibold">Optimization</h1>
+      <div class="flex items-center font-semibold text-ideeza-black mt-5"><CheckBox /> Free shipping</div>
+
+      <div class="mt-5">
+        <h1 class="font-semibold mb-1">Price</h1>
+        <div class="flex justify-between">
+          <input  placeholder="$ min" >
+          <input placeholder="$ max" >
+        </div>
+      </div>
+
+      <div class="mt-5">
+        <h1 class="font-semibold mb-1">Delivery time</h1>
+        <select class="optimize-select" >
+          <option value="1 day">1Day</option>
+        </select>
+      </div>
+
+      <div class="mt-5 flex">
+        <button class="btn btn-hollow--ideeza px-5 py-2 mr-3">Electronic criteria</button>
+        <button class="btn btn-hollow--ideeza px-5 py-2">Mechanics criteria</button>
+      </div>
+
+      <div class="flex mt-5"><button @click="doOptimize" class="btn btn-normal btn--ideeza px-4 py-2">Save</button></div>
+    </div>
+
   </div>
 </template>
 
 <script>
   import LeftMenu from '~/components/user/common-left-side-menu.vue'
   import Search from '~/components/form/search.vue'
+  import CheckBox from '~/components/form/checkbox-dark.vue'
   export default {
     layout: 'user',
     name: "manufacturers-index",
+    data: function(){
+      return {
+        requestQuote: false,
+        quoteSend: false,
+        showOptimize: false
+      }
+    },
     components: {
       LeftMenu,
-      Search
+      Search,
+      CheckBox
     },
     computed: {
       leftMenu() {
         return this.$store.state.usermenu.openLeftMenu;
       }
     },
+    methods: {
+      sendQuote() {
+        this.quoteSend = true;
+        this.requestQuote = false;
+        this.$notify({
+          group: 'success',
+          text: 'Request sent'
+        });
+      },
+      doOptimize(){
+        this.showOptimize = false;
+      },
+      onClickOutside(){
+        this.requestQuote = false;
+      },
+      onClickOutsideOptimize() {
+        this.showOptimize = false;
+      }
+    }
   }
 </script>
 
@@ -215,8 +280,19 @@
   option{
     @apply text-ideeza-black;
   }
+  .quote-popup{
+    @apply bg-white shadow p-5;
+    width: 500px;
+  }
   .services-container{
     width: 100%;
     max-width: 750px;
+  }
+  input{
+    @apply border border-solid border-ideeza-gray-300 outline-none p-2 rounded;
+  }
+  .optimize-select{
+    @apply border border-solid border-ideeza-gray-300 outline-none p-2 rounded w-full;
+    min-width: 100%;
   }
 </style>
