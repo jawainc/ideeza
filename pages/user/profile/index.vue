@@ -54,7 +54,7 @@
                 New york, NY
               </div>
             </div>
-            <nuxt-link to="/user/settings">
+            <nuxt-link to="/user/settings/notifications">
               <font-awesome-icon class="mr-1 h-4 text-sm inline-block cursor-pointer" :icon="['fas', 'cog']"/>
             </nuxt-link>
           </div>

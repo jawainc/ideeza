@@ -2,7 +2,7 @@
   <div class="lg:px-20">
     <h1 class="text-lg font-semibold heading-border border-b pb-3">Projects</h1>
 
-    <div class="scroll-area">
+    <div class="cart-scroll-area">
       <smooth-scrollbar :options="{alwaysShowTracks: true}">
         <div v-for="project in projects" :key="project.id">
           <div class="p-3 my-3 gradient-bg text-white flex justify-between gradient-bg items-center">
@@ -206,10 +206,7 @@
     margin-top: 15px;
   }
 
-  .scroll-area{
-    width: 100%;
-    height: 600px;
-  }
+
   /*Table*/
 
   /deep/ table{

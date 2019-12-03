@@ -188,6 +188,12 @@ select{
   transition: none;
 }
 
+
+.cart-scroll-area{
+  width: 100%;
+  height: 450px;
+}
+
 /*Calendar*/
 .vc-arrows-container{
   border-bottom: 1px solid lightgray;
