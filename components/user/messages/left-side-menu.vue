@@ -22,8 +22,8 @@
 
       <div class="flex justify-center mb-5">
         <div @click="activeMessages = 'people'" class="messages-left-toggler" :class="{'active': activeMessages === 'people'}" >People</div>
-        <div @click="activeMessages = 'groups'" class="messages-left-toggler" :class="{'active': activeMessages === 'groups'}">Groups</div>
-        <div @click="activeMessages = 'unseen'" class="messages-left-toggler" :class="{'active': activeMessages === 'unseen'}">Unseen</div>
+        <div @click="activeMessages = 'groups'" class="messages-left-toggler" :class="{'active': activeMessages === 'groups'}">Service Providers</div>
+        <div @click="activeMessages = 'unseen'" class="messages-left-toggler" :class="{'active': activeMessages === 'unseen'}">Notifications</div>
       </div>
       <!--Left Menu-->
       <div v-if="activeMessages === 'people'" class="left-main-menu border-t border-solid border-gray-300 z-50 bg-white">

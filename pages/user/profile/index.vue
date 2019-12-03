@@ -274,7 +274,9 @@
           <div class="mt-5" v-if="tabItem === 'about'">
             <div class="flex justify-between items-center">
               <h1 class="text-gray-500 font-semibold txt-xl my-10">CONTACT INFORMATION</h1>
-              <button class="btn btn-normal btn-small px-2">Edit profile</button>
+              <nuxt-link to="/user/settings/general">
+                <button class="btn btn-normal btn-small px-2">Edit profile</button>
+              </nuxt-link>
             </div>
 
             <div class="flex mb-5 font-semibold text-lg">
