@@ -1,23 +1,26 @@
 <template>
   <div class="engine-container">
-    <client-only placeholder="Loading...">
-      <div class="engine-actions bg-white p-5">
-        <div class="flex items-center mb-5">
-          <check-box :checked="true" @onChange="toggleGrid">Grid</check-box>
-          <div class="resolution-container ml-10">
-            <h1 class="font-semibold text-xs">Resolution</h1>
-            <vue-slider :min="1" :max="100" v-model="resolutionValue" @drag-end="setResolution"></vue-slider>
-          </div>
-        </div>
-        <div class="flex items-end">
-          <button class="btn btn-normal btn-small px-3" @click="import3dModel">Sample data</button>
-          <div class="ml-10 w-32">
-            <h1 class="font-semibold text-xs">Actions</h1>
-            <drop-down @input="setAction" :data="actionsData" selected="move" styleHeight="normal" />
-          </div>
-        </div>
 
+    <div class="engine-actions flex justify-between items-center bg-white p-5">
+      <div class="flex items-center ">
+        <check-box :checked="true" @onChange="toggleGrid">Grid</check-box>
+        <div class="resolution-container flex items-center ml-10 w-64">
+          <h1 class="font-semibold text-xs mr-2">Resolution</h1>
+          <vue-slider class="flex-grow" :min="1" :max="100" v-model="resolutionValue" @drag-end="setResolution"></vue-slider>
+        </div>
       </div>
+
+      <div class="flex items-center">
+        <button class="btn btn-normal btn-small px-3" @click="import3dModel">Sample data</button>
+        <div class="ml-10 w-48 flex items-center">
+          <h1 class="font-semibold text-xs mr-2">Actions</h1>
+          <drop-down class="flex-grow" @input="setAction" :data="actionsData" selected="move" styleHeight="mini" />
+        </div>
+      </div>
+
+    </div>
+    <client-only placeholder="Loading...">
+
       <engine class="border border-light-gray"
         :init-data="initDataForEngine"
         :pins-data="initDataForPins"
