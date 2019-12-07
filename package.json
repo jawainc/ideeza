@@ -16,7 +16,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.11.2",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/vue-fontawesome": "^0.1.7",
-    "@ideeza/vue3dengine": "https://firebasestorage.googleapis.com/v0/b/ideezaexamples.appspot.com/o/ideeza-vue3dengine-0.0.16.tgz?alt=media&token=c41be7a6-f285-4b11-8377-2ec1f7c1c5af",
+    "@ideeza/vue3dengine": "https://firebasestorage.googleapis.com/v0/b/ideezaexamples.appspot.com/o/ideeza-vue3dengine-0.0.17.tgz?alt=media&token=674cd9d7-68e3-4b37-8dd2-2ab165060f10",
     "@nuxtjs/device": "^1.2.3",
     "@nuxtjs/pwa": "^3.0.0-0",
     "apexcharts": "^3.10.1",

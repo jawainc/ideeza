@@ -5,8 +5,7 @@
       <div class="p-5 lg:flex justify-between items-center">
         <div class="flex items-center">
           <div class="flex items-center mr-5">
-            <span class="mr-1">Name</span>
-            <input type="text" class="w-32 bg-white p-1 border border-solid border-gray-400">
+            <check-box :checked="true" @onChange="toggleGrid">Grid</check-box>
           </div>
           <div class="flex items-center">
             <span class="mr-1">Category</span>
@@ -22,7 +21,23 @@
       </div>
 
       <div class="content-container relative">
-        <img class="object-center object-cover" src="~/static/images/add-cover.png" alt="">
+        <client-only placeholder="Loading...">
+
+          <engine class="border border-light-gray engine-container"
+                  :init-data="initDataForEngine"
+                  :router="router"
+                  :visibleGrid="visibleGrid"
+                  :transform="transform"
+                  :transformData="transformData"
+                  :objectData="objectData"
+                  :objectColor="objectColor"
+                  :uploadData="uploadData"
+                  :background="background"
+                  :apiPlatform="apiPlatform"
+                  :searchFor="searchFor"
+                  @selectObject="selectedObject"
+          />
+        </client-only>
       </div>
 
       <div class="flex justify-between p-5 w-full">
@@ -40,7 +55,7 @@
           <div class="rounded-full w-10 h-10 bg-blue-700 cursor-pointer"></div>
         </div>
         <div class="flex">
-          <button class="btn pill-button py-0 px-5" >Translate</button>
+          <button class="btn pill-button py-0 px-5" :class="{''}" >Translate</button>
           <button class="btn pill-button py-0 px-5 mx-5" >Scale</button>
           <button class="btn pill-button py-0 px-5" >Rotate</button>
         </div>
@@ -69,12 +84,37 @@
 </template>
 
 <script>
+  import Engine from '@ideeza/vue3dengine'
+  import CheckBox from '~/components/form/checkbox.vue'
     export default {
         name: "cover",
       data: () => {
           return {
-            description: false
+            description: false,
+            visibleGrid: true,        // show the grid
+            initDataForEngine: {},    // the entire object need to init the engine, at the begining is empty
+            router: 0,                // type of scene - part -0, component -1, cover -2
+            background: "#ffffff",    // backround color - hex string
+            transform: "translate",   // type of transform in scene - translate, rotate, scale
+            objectData: {},           // the object used to import a 3d object
+            uploadData: null,         // the event from upload
+            transformData: [0, 'X'],  // first is the value of input, second is axis - X,Y,Z(string)
+            objectColor: "#ffffff",   // color of object
+            apiPlatform: "polygoogle",// site where we search polygoogle/remix3d
+            searchFor: "",            // text after we search
           }
+      },
+      components: {
+        'engine': Engine.ct,
+        'check-box': CheckBox,
+      },
+      methods: {
+        toggleGrid(){
+          this.visibleGrid = !this.visibleGrid;
+        },
+        selectedObject(val) {
+
+        }
       }
     }
 </script>
@@ -85,5 +125,8 @@
   }
   .content-container{
     /*height: 300px;*/
+  }
+  .engine-container{
+    height: 450px;
   }
 </style>
