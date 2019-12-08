@@ -51,13 +51,21 @@
           <input type="text" class="w-20 bg-white p-1 border border-solid border-gray-400 mr-2">
         </div>
         <div class="flex items-center font-semibold text-gray-800">
-          <span class="mr-3">Color</span>
-          <div class="rounded-full w-10 h-10 bg-blue-700 cursor-pointer"></div>
+          <div class="relative">
+            <span class="block">Color</span>
+            <div class="rounded-full w-10 h-10 cursor-pointer" :style="objectDisplayStyle"></div>
+          </div>
+
+          <div class="relative">
+            <span class="block">BG Color</span>
+            <div class="rounded-full w-10 h-10 bg-blue-700 cursor-pointer" :style="backgroundDisplayStyle"></div>
+          </div>
+
         </div>
         <div class="flex">
-          <button class="btn pill-button py-0 px-5" :class="{''}" >Translate</button>
-          <button class="btn pill-button py-0 px-5 mx-5" >Scale</button>
-          <button class="btn pill-button py-0 px-5" >Rotate</button>
+          <button @click="transform='translate'" class="btn pill-button py-0 px-5 " :class="{'pill-button--ideeza': transform === 'translate'}" >Translate</button>
+          <button @click="transform='scale'" class="btn pill-button py-0 px-5 mx-5" :class="{'pill-button--ideeza': transform === 'scale'}" >Scale</button>
+          <button @click="transform='rotate'" class="btn pill-button py-0 px-5" :class="{'pill-button--ideeza': transform === 'rotate'}" >Rotate</button>
         </div>
 
       </div>
@@ -107,6 +115,14 @@
       components: {
         'engine': Engine.ct,
         'check-box': CheckBox,
+      },
+      computed: {
+          backgroundDisplayStyle() {
+            return `background-color: ${this.background}`;
+          },
+          objectDisplayStyle() {
+            return `background-color: ${this.objectColor}`;
+          }
       },
       methods: {
         toggleGrid(){
