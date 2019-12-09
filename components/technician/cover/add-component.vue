@@ -15,13 +15,12 @@
           </div>
         </div>
         <div class="flex items-center">
-          <button class="btn pill-button py-0 px-5 mr-5" >Upload 3D</button>
-          <button class="btn pill-button py-0 px-5" >Upload image</button>
+          <button @click="addImage" class="btn pill-button py-0 px-5" >Sample Data</button>
         </div>
       </div>
 
       <div class="content-container relative">
-        <client-only placeholder="Loading...">
+        <client-only>
 
           <engine class="border border-light-gray engine-container"
                   :init-data="initDataForEngine"
@@ -37,28 +36,29 @@
                   :searchFor="searchFor"
                   @selectObject="selectedObject"
           />
+          <spinner slot="placeholder" />
         </client-only>
       </div>
 
-      <div class="flex justify-between p-5 w-full">
+      <div class="flex justify-between items-center p-5 w-full">
         <div class="flex items-center font-semibold text-gray-800">
           <span class="mr-2">Axis</span>
           <span class="mr-2 text-lg">X</span>
-          <input type="text" class="w-20 bg-white p-1 border border-solid border-gray-400 mr-2">
+          <input @input="setTransform($event.target.value, 'X')" type="text" class="w-20 bg-white p-1 border border-solid border-gray-400 mr-2">
           <span class="mr-2 text-lg">Y</span>
-          <input type="text" class="w-20 bg-white p-1 border border-solid border-gray-400 mr-2">
+          <input @input="setTransform($event.target.value, 'Y')" type="text" class="w-20 bg-white p-1 border border-solid border-gray-400 mr-2">
           <span class="mr-2 text-lg">Z</span>
-          <input type="text" class="w-20 bg-white p-1 border border-solid border-gray-400 mr-2">
+          <input @input="setTransform($event.target.value, 'Z')" type="text" class="w-20 bg-white p-1 border border-solid border-gray-400 mr-2">
         </div>
         <div class="flex items-center font-semibold text-gray-800">
-          <div class="relative">
+          <div class="relative mr-5 flex flex-col items-center text-xs">
             <span class="block">Color</span>
-            <div class="rounded-full w-10 h-10 cursor-pointer" :style="objectDisplayStyle"></div>
+            <input v-model="objectColor" type="color">
           </div>
 
-          <div class="relative">
+          <div class="relative flex flex-col items-center text-xs">
             <span class="block">BG Color</span>
-            <div class="rounded-full w-10 h-10 bg-blue-700 cursor-pointer" :style="backgroundDisplayStyle"></div>
+            <input v-model="background" type="color">
           </div>
 
         </div>
@@ -87,6 +87,7 @@
       <button class="btn pill-button py-0 px-20 mr-5" >+ Add new part</button>
       <button class="btn pill-button pill-button--ideeza py-0 px-12" >Save</button>
     </div>
+
   </div>
 
 </template>
@@ -94,14 +95,16 @@
 <script>
   import Engine from '@ideeza/vue3dengine'
   import CheckBox from '~/components/form/checkbox.vue'
+  import Spinner from '~/components/loader/spinner.vue'
     export default {
         name: "cover",
       data: () => {
           return {
+            colorPicker: false,
             description: false,
             visibleGrid: true,        // show the grid
             initDataForEngine: {},    // the entire object need to init the engine, at the begining is empty
-            router: 0,                // type of scene - part -0, component -1, cover -2
+            router: 1,                // type of scene - part -0, component -1, cover -2
             background: "#ffffff",    // backround color - hex string
             transform: "translate",   // type of transform in scene - translate, rotate, scale
             objectData: {},           // the object used to import a 3d object
@@ -115,6 +118,11 @@
       components: {
         'engine': Engine.ct,
         'check-box': CheckBox,
+        'spinner': Spinner,
+      },
+      mounted() {
+          console.log('mounted');
+          //this.objectData =
       },
       computed: {
           backgroundDisplayStyle() {
@@ -125,8 +133,20 @@
           }
       },
       methods: {
-        toggleGrid(){
-          this.visibleGrid = !this.visibleGrid;
+        toggleGrid(state){
+          this.visibleGrid = state;
+        },
+        showColorPicker() {
+          this.showColorPicker = true;
+        },
+        setTransform(val, position){
+          if(!isNaN(val)){
+            console.log(val)
+            this.transformData = [val, position]
+          }
+        },
+        addImage(){
+          this.objectData = {'transform':{'position':[0,0,0],'rotation':[0,0,0],'scale':[1,1,1],'color':'#1f1f1f'},'url':'user-5272f6574e9b4c2b955bb3a6dbc45795.glb'};
         },
         selectedObject(val) {
 
@@ -140,9 +160,12 @@
     min-width: 130px;
   }
   .content-container{
-    /*height: 300px;*/
+    height: 450px;
   }
   .engine-container{
     height: 450px;
+  }
+  .color-container{
+    @apply rounded-full w-10 h-10 cursor-pointer border border-solid border-gray-300 shadow;
   }
 </style>

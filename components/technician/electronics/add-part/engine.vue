@@ -16,6 +16,8 @@
 
 <script>
   import Engine from '@ideeza/vue3dengine'
+
+
     export default {
         name: "engine",
       components: {
@@ -24,9 +26,7 @@
       data() {
         return {
           initData: 'TQFN',   // name of one package - TQFN, FEMALEHEADER, R0805
-          dataForm: {
-            name: ''
-          }, // all the informations from form
+          dataForm: {}, // all the informations from form
           toggle3d: true,     // show 3d
           toggle2d: false,    // show 2d
           togglesc: false,    // show schematic

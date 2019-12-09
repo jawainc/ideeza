@@ -22,13 +22,13 @@
     <client-only placeholder="Loading...">
 
       <engine class="border border-light-gray"
-        :init-data="initDataForEngine"
-        :pins-data="initDataForPins"
-        :visibleGrid="visibleGrid"
-        :group-button="doAction"
-        :part-data="partDataForImport"
-        :resolution="parseInt(resolution)"
-        @selectObject="selectedObject"
+              :init-data="initDataForEngine"
+              :visibleGrid="visibleGrid"
+              :componentSize="componentSize"
+              :visible3d="visible3d"
+              :group-button="doAction"
+              :resolution="parseInt(resolution)"
+              @selectObject="selectedObject"
       />
     </client-only>
   </div>
@@ -47,19 +47,20 @@
         name: "design",
     data() {
       return {
-        actionsData: ['move', 'rotate', 'copy', 'delete', 'label', 'route', 'highlight'],
         resolutionValue: 10,
+        actionsData: ['move', 'rotate', 'copy', 'delete', 'label', 'route', 'highlight'],
         visibleGrid: true,        // show the grid
-        initDataForEngine: {},    // the entire object need to init the engine, at the begining is empty
-        initDataForPins: {
-          need: {},
-          pass: {}
-        },                        // the entire object need on adding pins
-        doAction: "move",         // move, rotate, copy, delete, label, route, highlight
+        initDataForEngine: {
+          "nets":[],
+          "routing_data":[],
+          "assets":[{"transform":{"best_p":[0,0,0,0],"best_sc":[0,0,0],"position":[0,0,0],"rotation":[0,0,0],"pivot":[-4.67,-4.67]},"name":"ATmega328","name2d":"AT","url":"user-e71413056a4049e399aad42118410e87.babylon","design":"user-0e1383d25be244a08f024106d03ac8ae.babylon","schematic":"user-6cb573279715425db9fec438d44c73b8.babylon"}],
+          "compSize":[20,20]
+        },                        // the entire object need on init, those infos come from schematic engine
+        doAction: "move",         // 'move','rotate','mirror','label','route','highlight','delete'
         resolution: 10,           // min: 1, max: 100.
-        partDataForImport: {},     // the entire object need to import a part,
-
-        sampleData: {'transform':{'best_p':[0, 0, 0, 0],'best_sc':[0, 0, 0],'position':[0,0,0],'rotation':[0,0,0],'pivot':[-4.67,-4.67]},'name':'ATmega328','name2d':'AT','url':'user-e71413056a4049e399aad42118410e87.babylon','design':'user-0e1383d25be244a08f024106d03ac8ae.babylon','schematic':'user-6cb573279715425db9fec438d44c73b8.babylon'}
+        componentSize: [20, 20],  // size of component
+        visible3d: false,         // show/hide 3d objects
+        wireWidth: 0.1            // width of wire
       }
     },
     components: {
