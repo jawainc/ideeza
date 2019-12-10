@@ -80,7 +80,7 @@
         </div>
 
         <Electronics v-if="currentMenu.name === 'Electronics'" />
-
+        <Cover v-if="currentMenu.name === 'Cover'" />
       </div>
     </div>
   </div>
@@ -90,6 +90,7 @@
   import _ from 'lodash'
   import LeftMenu from '~/components/user/pro/left-menu.vue'
   import Electronics from '~/components/user/pro/pro-electronics.vue'
+  import Cover from '~/components/user/pro/pro-cover.vue'
   import CheckBox from '~/components/form/checkbox.vue'
     export default {
       layout: 'user',
@@ -97,6 +98,7 @@
       components: {
         LeftMenu,
         Electronics,
+        Cover,
         'check-box': CheckBox
       },
       data: function () {
