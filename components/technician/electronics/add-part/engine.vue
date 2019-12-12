@@ -16,17 +16,20 @@
 
 <script>
   import Engine from '@ideeza/vue3dengine'
-
-
+  import {
+    TQFNdata,
+    // FemaleHeaderdata,
+    // R0805data
+  } from '@ideeza/vue3dengine/src/engines/electronic_tech_part'
     export default {
-        name: "engine",
+      name: "engine",
       components: {
         'engine': Engine.etp,
       },
       data() {
         return {
           initData: 'TQFN',   // name of one package - TQFN, FEMALEHEADER, R0805
-          dataForm: {}, // all the informations from form
+          dataForm: TQFNdata, // all the informations from form
           toggle3d: true,     // show 3d
           toggle2d: false,    // show 2d
           togglesc: false,    // show schematic
